@@ -228,8 +228,13 @@ const Dashboard: React.FC = () => {
             />
           </a>
         </div>
-        <div className=" flex flex-col md:flex-row gap-5 p-5">
-          <form onSubmit={handleSubmit} className="mb-6 space-y-4">
+        <div className=" flex flex-col md:flex-row gap-5 p-5 ">
+          <form
+            onSubmit={handleSubmit}
+            className="mb-6 space-y-4 shadow-xl p-5"
+          >
+            <p>Add Resource*</p>
+
             <input
               type="text"
               name="title"
@@ -273,7 +278,8 @@ const Dashboard: React.FC = () => {
               {loading ? "Please wait..." : "Add Resource"}
             </button>
           </form>
-          <div className="fle gap-4 mb-6">
+          <div className=" gap-4 mb-6">
+            <p className="text-red-500">Search and Filter*</p>
             <input
               type="text"
               placeholder="Search by title"

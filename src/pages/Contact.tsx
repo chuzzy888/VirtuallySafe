@@ -107,10 +107,7 @@ export default function Contact() {
           </div>
         </div>
       </section>
-      <section className="bg-white  h-20 md:h-30 w-full">
-        {/* Content Placeholder */}
-        <div className="flex justify-center items-center h-full"></div>
-      </section>
+      <section className="bg-white  h-10 w-full"></section>
       <section className="bg-[#F9F9F9] py-8">
         <div className="container mx-auto px-4">
           {/* Logos Container */}
@@ -149,10 +146,7 @@ export default function Contact() {
           </div>
         </div>
       </section>
-      <section className="bg-white  h-20 md:h-30 w-full">
-        {/* Content Placeholder */}
-        <div className="flex justify-center items-center h-full"></div>
-      </section>
+      <section className="bg-white  h-10 w-full"></section>
     </div>
   );
 }

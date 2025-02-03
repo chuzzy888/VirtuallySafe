@@ -15,10 +15,17 @@ import YoungPeopleResources from "./Resources/YoungPeopleResources";
 import ParentResources from "./Resources/ParentResources";
 import EducatorsResources from "./Resources/EducatorsResources";
 import GeneralResources from "./Resources/GeneralResources";
-import SaferGamble from "./Policy/SaferGamble";
-import Advocacy from "./Policy/Advocacy";
+import ISSF from "./Programs/ISSF";
 import Contact from "./pages/Contact";
 import Dashboard from "./components/Dashboard";
+import Research from "./Programs/Research";
+import Programs from "./Programs/Programs";
+import ISSC from "./Programs/ISSC";
+import CSC from "./Programs/CSC";
+import Hacktivate from "./Programs/Hacktivate";
+import Competition from "./Programs/Competition";
+import YoungFellows from "./Programs/YoungFellows";
+import AwarenessCampaign from "./Programs/AwarenessCampaign";
 
 // A wrapper to conditionally show/hide the Navbar and Footer
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -48,10 +55,17 @@ function App() {
           <Route path="/parent-resources" element={<ParentResources />} />
           <Route path="/educators-resources" element={<EducatorsResources />} />
           <Route path="/general-resources" element={<GeneralResources />} />
-          <Route path="/safer-gambling" element={<SaferGamble />} />
-          <Route path="/advocacy" element={<Advocacy />} />
+          <Route path="/issf" element={<ISSF />} />
+          <Route path="/issc" element={<ISSC />} />
+          <Route path="/csc" element={<CSC />} />
+          <Route path="/hacktivate" element={<Hacktivate />} />
+          <Route path="/competition" element={<Competition />} />
+          <Route path="/programs-report" element={<Programs />} />
+          <Route path="/young-fellows-program" element={<YoungFellows />} />
+          <Route path="/awarenes-campaign" element={<AwarenessCampaign />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/admin" element={<Dashboard />} />
+          <Route path="/research" element={<Research />} />
           <Route
             path="/young-people-resources"
             element={<YoungPeopleResources />}

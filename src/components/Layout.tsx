@@ -5,7 +5,7 @@ interface LayoutProps {
 }
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
-  return <main className="flex-grow container mx-auto px-4 ">{children}</main>;
+  return <main className="flex-grow container mx-auto  ">{children}</main>;
 };
 
 export default Layout;

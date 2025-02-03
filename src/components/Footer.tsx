@@ -1,85 +1,93 @@
 import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
 import logo from "../assets/images/vlg.png";
+
 const Footer = () => {
   return (
-    <footer className="bg-[#00294B] text-white py-10 px-4 font-josefin">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+    <footer className="bg-[#00294B] text-white py-10 px-6 font-lato">
+      {/* Main Content */}
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between lg:space-x-12">
         {/* Logo and Subscription */}
-        <div>
+        <div className="flex-1 mb-8 lg:mb-0">
           <img
             src={logo}
             alt="Virtually Safe Logo"
-            className="object-cover mb-8 mr-2 h-10 md:h-12"
+            className="mb-6 h-10 md:h-12 object-cover"
           />
-
           <p className="text-gray-300 mb-4">
             Subscribe for Latest News and Resources
           </p>
           <div className="relative">
             <input
               type="email"
-              placeholder="Enter your email address"
-              className="w-full py-4 px-4 pr-16 text-black rounded-md border border-gray-300 focus:outline-none "
+              placeholder="Enter email address"
+              className="w-full py-3 px-4 text-white bg-[#00294B] border border-gray-400 rounded-md placeholder-white focus:ring-2 focus:ring-[#61CE70] focus:outline-none"
             />
-            <button className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-green-500 hover:bg-green-600 text-white px-5 py-1.5 rounded-md shadow-md transition duration-300">
+            <button className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-[#61CE70] hover:bg-green-600 text-[#1E1E1E] px-5 py-2 rounded-md shadow-md transition duration-300">
               Send
             </button>
           </div>
         </div>
 
         {/* Organization */}
-        <div>
+        <div className="flex-1 mb-8 lg:mb-0">
           <h3 className="text-lg font-semibold mb-4">Organization</h3>
           <ul className="space-y-2 text-gray-300">
-            <li>About</li>
-            <li>Our Service</li>
-            <li>Resources</li>
-            <li>Policy</li>
-            <li>Contact Us</li>
-            <li>Games</li>
+            <li className="hover:text-green-400 cursor-pointer">About</li>
+            <li className="hover:text-green-400 cursor-pointer">Our Service</li>
+            <li className="hover:text-green-400 cursor-pointer">Resources</li>
+            <li className="hover:text-green-400 cursor-pointer">Policy</li>
+            <li className="hover:text-green-400 cursor-pointer">Contact Us</li>
+            <li className="hover:text-green-400 cursor-pointer">Games</li>
           </ul>
         </div>
 
         {/* Resources */}
-        <div>
+        <div className="flex-1 mb-8 lg:mb-0">
           <h3 className="text-lg font-semibold mb-4">Resources</h3>
           <ul className="space-y-2 text-gray-300">
-            <li>Our Programs report</li>
-            <li>Adventure of Chimamanda & Yusuf</li>
-            <li>Internet Safety Tips</li>
-            <li>Digital Right</li>
-            <li>Phishing Email Tips</li>
+            <li className="hover:text-green-400 cursor-pointer">
+              Our Programs Report
+            </li>
+            <li className="hover:text-green-400 cursor-pointer">
+              Adventure of Chimamanda & Yusuf
+            </li>
+            <li className="hover:text-green-400 cursor-pointer">
+              Internet Safety Tips
+            </li>
+            <li className="hover:text-green-400 cursor-pointer">
+              Digital Right
+            </li>
+            <li className="hover:text-green-400 cursor-pointer">
+              Phishing Email Tips
+            </li>
           </ul>
         </div>
 
         {/* Contact Us */}
-        <div>
+        <div className="flex-1">
           <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
-          <p className="text-gray-300">
+          <p className="text-gray-300 mb-2">
             Email:{" "}
             <a
               href="mailto:info@virtuallysafe.org"
               className="text-green-400 hover:underline"
             >
-              info@virtuallysafe.org
+              hello@virtuallysafe.org
             </a>
           </p>
-          <p className="text-gray-300 my-2">
+          <p className="text-gray-300 mb-2">
             Location: 147/149, Akowonjo Road, Lagos, Nigeria.
           </p>
-          <p className="text-gray-300 mb-4">+2347072634282</p>
+          <p className="text-gray-300 mb-6">+2347072634282</p>
           {/* Social Icons */}
           <div className="flex space-x-4">
             <span className="hover:text-green-500 cursor-pointer">
-              {" "}
               <FaFacebook />
             </span>
             <span className="hover:text-green-500 cursor-pointer">
-              {" "}
               <FaTwitter />
             </span>
             <span className="hover:text-green-500 cursor-pointer">
-              {" "}
               <FaInstagram />
             </span>
           </div>
@@ -87,7 +95,7 @@ const Footer = () => {
       </div>
 
       {/* Footer Bottom */}
-      <div className="mt-8 text-center text-gray-400 border-t border-gray-600 pt-4">
+      <div className="mt-10 text-center text-gray-400 border-t border-gray-600 pt-6">
         <p>&copy; 2024 Copyrights by Virtually Safe</p>
       </div>
     </footer>

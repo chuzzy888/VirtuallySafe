@@ -219,7 +219,9 @@ const Dashboard: React.FC = () => {
       <ToastContainer />
       <div className="max-w-4xl mx-auto bg-white p-6 rounded-lg shadow-md">
         <div className="flex justify-between items-center">
-          <h1 className="text-2xl font-bold mb-4">Resource Manager</h1>
+          <h1 className="text-2xl font-bold mb-4 font-nouvelr">
+            Resource Manager
+          </h1>
           <a href="/" className="flex items-center">
             <img
               src={logo}
@@ -248,7 +250,7 @@ const Dashboard: React.FC = () => {
               className="border p-2 rounded w-full"
             >
               <option value="Parent">Parent</option>
-              <option value="Advocacy">Advocacy</option>
+              <option value="Advocacy">Programs Report</option>
               <option value="child">Young</option>
               <option value="General">General</option>
               <option value="Educator">Educator</option>
@@ -294,7 +296,7 @@ const Dashboard: React.FC = () => {
             >
               <option value="All">All Types</option>
               <option value="Parent">Parent</option>
-              <option value="Advocacy">Advocacy</option>
+              <option value="Advocacy">Programs Report</option>
               <option value="child">Young</option>
               <option value="General">General</option>
               <option value="Educator">Educator</option>

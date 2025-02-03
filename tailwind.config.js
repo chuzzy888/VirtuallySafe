@@ -15,12 +15,9 @@ export default {
         sans: ["Roboto", "sans-serif"],
         lato: ["Lato", "sans-serif"],
         josefin: ["Josefin Sans", "sans-serif"],
-        playfair: ["Playfair Display", "serif"],
-        lora: ["Lora", "serif"],
-        Raleway: ["Raleway", "sans-serif"],
-        merri: ["Merriweather", "serif"],
-        quick: ["Quicksand", "sans-serif"],
-        libre: ["Libre Baskerville", "serif"],
+
+        nouvelr: ["NouvelR", "sans-serif"],
+        aeonik: ["Aeonik", "sans-serif"],
       },
       animation: {
         "fade-in": "fadeIn 2s ease-in-out",

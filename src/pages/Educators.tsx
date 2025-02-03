@@ -10,24 +10,28 @@ export default function Educators() {
   return (
     <div>
       <div
-        className="relative h-[300px] md:h-[600px] w-full bg-cover bg-center flex justify-center items-center font-josefin"
+        className="relative h-[350px] md:h-[500px] lg:h-[600px] w-full bg-cover bg-center flex justify-center items-center font-josefin"
         style={{
           backgroundImage: `url(${pmo})`,
         }}
       >
-        {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-black bg-opacity-70"></div>
+        {/* Dark Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/80"></div>
 
         {/* Content */}
-        <div className="relative z-10 text-center px-6 md:px-8">
-          <p className="text-green-400 text-base md:text-5xl font-semibold mb-4">
-            Educators
+        <div className="relative z-10 text-center px-6 md:px-12 max-w-4xl">
+          {/* Subheading */}
+          <p className="text-green-400 text-lg md:text-2xl font-semibold tracking-wide mb-4 uppercase font-nouvelr">
+            Empowering Educators
           </p>
-          <h1 className="text-white text-2xl md:text-4xl lg:text-5xl font-bold leading-snug md:leading-tight mb-6">
-            Educating and equipping teachers to teach young people how to be
-            safe online.
+
+          {/* Heading */}
+          <h1 className="text-white text-2xl md:text-4xl lg:text-5xl  font-bold leading-tight mb-10 font-nouvelr">
+            Equipping teachers with the knowledge to guide young people in
+            staying safe online.
           </h1>
-          <button className="bg-green-500 hover:bg-green-600 text-white text-sm md:text-base font-semibold px-6 py-3 rounded-full shadow-lg transition duration-300">
+          {/* Button */}
+          <button className="bg-green-400 hover:bg-green-500 text-white font-medium text-sm md:text-lg px-5 py-3 rounded-lg shadow-lg  font-nouvelr">
             Explore Our Programs Report
           </button>
         </div>
@@ -71,62 +75,64 @@ export default function Educators() {
           </div>
         </div>
       </section>
-      <section className="bg-[#F9F9F9] text-[#1E1E1E] px-6 md:px-12 py-10 md:py-16 font-josefin">
-        <h2 className="text-[#00294B] text-center font-semibold text-lg md:text-xl mb-4 underline decoration-2">
-          We Serve Educators
-        </h2>
-        <p className="text-center text-sm md:text-lg leading-relaxed max-w-3xl mx-auto mb-8 text-[#00294B]">
-          As an organization, we are passionate about providing digital skills,
-          including ensuring children have the right to be safe online and
-          guiding all stakeholders on securing that right.
-        </p>
+      <section className="bg-[#F9F9F9] text-[#1E1E1E] px-6 md:px-16 py-12 md:py-20 font-josefin">
+        {/* Section Heading */}
+        <div className="text-center max-w-3xl mx-auto mb-10">
+          <h2 className="text-[#00294B] font-bold text-xl md:text-3xl mb-4 font-nouvelr">
+            We Serve Educators
+          </h2>
+          <p className="text-sm md:text-lg leading-relaxed text-[#00294B] font-lato">
+            We are passionate about providing digital skills, ensuring children
+            have the right to be safe online, and guiding all stakeholders on
+            securing that right.
+          </p>
+        </div>
 
-        <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+        {/* Content Section */}
+        <div className="flex flex-col lg:flex-row items-center md:items-start gap-12">
           {/* Image Section */}
-          <div className="w-full md:w-1/3 flex justify-center">
+          <div className="w-full lg:w-1/2 flex justify-center">
             <img
               src={lgt}
               alt="Educators teaching"
-              className="rounded-md w-full max-w-[350px] h-[300px] object-cover md:h-[350px] md:max-w-[400px] shadow-lg"
+              className="rounded-xl w-full lg:max-w-[400px] h-[350px] md:h-[400px] object-cover shadow-lg"
             />
           </div>
 
-          {/* Content Section */}
-          <div className="w-full md:w-2/3 text-sm md:text-base leading-relaxed text-center md:text-start">
-            <p className="mb-6">
+          {/* Text Content Section */}
+          <div className="w-full lg:w-1/2 text-center md:text-start space-y-6">
+            <p className="text-base md:text-lg font-lato">
               One of the most effective ways to provide this education is
-              through teachers. This is why our work with educators is so
+              through teachers. That’s why our work with educators is so
               important to us. We host Teacher’s Hangouts annually to discuss
-              online safety and share resources with teachers on how to
-              safeguard young people. Many of our educators have even started
-              Online Safety Clubs in their schools.
+              online safety and share resources with teachers on safeguarding
+              young people. Many of our educators have even started Online
+              Safety Clubs in their schools.
             </p>
-            <p className="mb-6">
+            <p className="text-base md:text-lg font-lato">
               With the numerous challenges and risks in the digital environment,
               online safety is essential as students navigate their digital
-              world. At Virtually Safe, we aim to empower students to identify
-              common issues and stay safe online.
+              world. At Virtually Safe, we empower students to identify common
+              issues and stay safe online.
             </p>
-            <p className="mb-8">
-              To achieve this, we collaborate with all stakeholders, including
-              educators, teachers, and schools. These groups play a pivotal role
-              in shaping young people and ensuring safe internet usage at school
-              and home. Schools and teachers can significantly contribute to
-              keeping young people safe online.
+            <p className="text-base md:text-lg font-lato">
+              We collaborate with all stakeholders, including educators,
+              teachers, and schools. These groups play a pivotal role in shaping
+              young people and ensuring safe internet usage both at school and
+              home.
             </p>
-            <div className="flex justify-center md:justify-start">
-              <button className="bg-[#61CE70] hover:bg-[#4CAF50] text-white font-semibold px-6 py-3 rounded-full shadow-md transition duration-300">
-                Explore Our Programs Report
+
+            {/* CTA Button */}
+            <div className="flex justify-center md:justify-start mt-4">
+              <button className="bg-green-400 hover:bg-green-500 text-white font-medium text-sm md:text-lg px-5 py-3 rounded-lg shadow-lg w-full md:w-auto font-nouvelr">
+                Explore Our Programs
               </button>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="bg-white  h-20 md:h-30 w-full">
-        {/* Content Placeholder */}
-        <div className="flex justify-center items-center h-full"></div>
-      </section>
+      <section className="bg-white  h-10 w-full"></section>
     </div>
   );
 }

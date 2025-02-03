@@ -10,29 +10,28 @@ export default function Parent() {
   return (
     <div>
       <div
-        className="relative h-[300px] md:h-[600px] lg:h-[700px] w-full bg-cover bg-center flex justify-center items-center font-josefin"
+        className="relative h-auto py-20 md:h-[620px] w-full bg-cover bg-center flex items-center justify-center"
         style={{
           backgroundImage: `url(${pim})`,
         }}
       >
         {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/80"></div>
 
         {/* Content */}
-        <div className="relative z-10 text-center px-6 md:px-10 max-w-4xl">
+        <div className="relative z-10 text-center max-w-3xl">
           {/* Subheading */}
-          <p className="text-green-400 text-lg md:text-xl font-semibold tracking-wide mb-4">
-            Parents
+          <p className="text-[#61CE70] text-lg md:text-2xl font-semibold uppercase tracking-widest mb-3 font-nouvelr">
+            Empowering Parents
           </p>
 
           {/* Heading */}
-          <h1 className="text-white text-2xl md:text-4xl lg:text-5xl font-bold leading-tight mb-6">
-            Educating parents to understand the importance of keeping their
-            children safe on the internet.
+          <h1 className="text-white text-2xl md:text-5xl lg:text-6xl font-boldleading-tight md:mb-10 mb-5 font-nouvelr">
+            Helping Parents Protect <br /> Their Children Online
           </h1>
 
           {/* Button */}
-          <button className="bg-green-500 hover:bg-green-600 text-white text-sm md:text-base font-semibold px-8 py-3 rounded-full shadow-lg hover:shadow-xl transition duration-300">
+          <button className="bg-green-400 hover:bg-green-500 text-white font-medium text-sm md:text-lg px-5 py-3 rounded-lg shadow-lg  font-nouvelr">
             Explore Our Programs Report
           </button>
         </div>
@@ -76,72 +75,64 @@ export default function Parent() {
           </div>
         </div>
       </section>
-      <section className="bg-[#F9F9F9] text-[#00294B] px-6 md:px-12 py-10 md:py-16 font-josefin">
+      <section className="bg-[#F9F9F9] text-[#00294B] px-6 md:px-16 py-12 md:py-20 font-josefin">
         {/* Section Heading */}
-        <h2 className="text-center font-semibold text-xl md:text-2xl mb-6 underline decoration-2">
-          We Serve Parents
+        <h2 className="text-center font-bold text-2xl md:text-4xl mb-6 text-[#00294B] font-nouvelr">
+          We Support Parents in Keeping Their Children Safe Online
         </h2>
 
         {/* Introductory Text */}
-        <p className="text-center text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-10 font-bold">
-          Are you a parent of a child who uses the internet or the parent of a
-          child who will start using the internet soon?
+        <p className="text-center text-base md:text-lg leading-relaxed max-w-3xl mx-auto mb-10 text-[#1E1E1E] font-medium font-nouvelr">
+          Are you a parent of a child who uses the internet or will start using
+          it soon? Your role in ensuring their safety online is more important
+          than ever.
         </p>
 
         {/* Content Wrapper */}
-        <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+        <div className="flex flex-col md:flex-row items-center gap-12">
           {/* Image Section */}
           <div className="w-full md:w-1/2 flex justify-center">
             <img
               src={wsp}
-              alt="Children smiling"
-              className="rounded-lg shadow-lg w-full md:h-[550px] max-w-[300px] md:max-w-[450px] object-cover"
+              alt="Happy family using the internet"
+              className="rounded-2xl shadow-xl w-full md:h-[400px] max-w-[350px] md:max-w-[500px] object-cover"
             />
           </div>
 
           {/* Text Content Section */}
-          <div className="w-full md:w-1/2 text-sm md:text-base leading-relaxed text-center md:text-start">
+          <div className="w-full md:w-1/2 text-base md:text-lg leading-relaxed text-center md:text-left font-lato">
             <p className="mb-5 text-[#1E1E1E]">
-              If you are, firstly you should know that it is your responsibility
-              to make sure that your child stays safe while using the internet.
-              Secondly, you should know that the digital world is not optional
-              for young people; it is their gateway to education, information,
-              entertainment, health services, and mediates their relationships
-              and experiences.
+              As a parent, it is your responsibility to ensure that your child
+              stays safe while exploring the digital world. The internet is no
+              longer optional for young people; it is their gateway to
+              education, entertainment, social interactions, and essential
+              services.
             </p>
             <p className="mb-5 text-[#1E1E1E]">
-              While we believe that the Internet can be a wonderful place for
-              young people to learn, shop, play games, create, be entertained
-              and talk to friends, we also know that there are predators,
-              identity thieves, and others online who may try to harm vulnerable
-              users. Young people can be exposed to harmful content and behavior
-              online, such as cyberbullying, sexual harassment, pornography,
-              violence, or self-harm.
+              While the internet offers incredible opportunities, it also
+              presents risks such as cyberbullying, identity theft, and exposure
+              to harmful content. Young people must be protected from
+              inappropriate online behavior and threats like sexual harassment,
+              violence, and exploitation.
             </p>
             <p className="mb-8 text-[#1E1E1E]">
-              Virtually Safe wants to ensure that young people have a safe and
-              stimulating environment online while engaging with new
-              technologies and spending time online by providing efficient
-              responses and help to prevent negative consequences for their
-              cognitive, social, and emotional development. Our goal is to
-              provide resources to protect them from harmful and illegal online
-              content, conduct, and risks as young consumers and to improve
-              their well-being online as they explore the digital world.
+              At Virtually Safe, we are committed to providing the right tools
+              and resources to help parents create a safer online environment
+              for their children. Our mission is to empower you with knowledge,
+              strategies, and digital solutions to ensure their well-being in
+              the digital age.
             </p>
             {/* Button */}
             <div className="flex justify-center md:justify-start">
-              <button className="bg-[#61CE70] hover:bg-green-600 text-white font-semibold px-6 py-3 rounded-xl shadow-lg transition duration-300">
-                Explore Our Programs Report
+              <button className="bg-green-400 hover:bg-green-500 text-white font-medium text-sm md:text-lg px-5 py-3 rounded-lg shadow-lg w-full md:w-auto font-nouvelr">
+                Explore Our Programs
               </button>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="bg-white  h-20 md:h-30 w-full">
-        {/* Content Placeholder */}
-        <div className="flex justify-center items-center h-full"></div>
-      </section>
+      <section className="bg-white  h-10 w-full"></section>
     </div>
   );
 }

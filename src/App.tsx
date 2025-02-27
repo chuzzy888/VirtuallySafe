@@ -26,6 +26,8 @@ import Hacktivate from "./Programs/Hacktivate";
 import Competition from "./Programs/Competition";
 import YoungFellows from "./Programs/YoungFellows";
 import AwarenessCampaign from "./Programs/AwarenessCampaign";
+import SaferGamble from "./Programs/SaferGamble";
+import ScrollToTop from "./components/ScrollToTop";
 
 // A wrapper to conditionally show/hide the Navbar and Footer
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -47,30 +49,36 @@ function App() {
   return (
     <Router>
       <Layout>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/young-people" element={<YoungPeople />} />
-          <Route path="/parent" element={<Parent />} />
-          <Route path="/educators" element={<Educators />} />
-          <Route path="/parent-resources" element={<ParentResources />} />
-          <Route path="/educators-resources" element={<EducatorsResources />} />
-          <Route path="/general-resources" element={<GeneralResources />} />
-          <Route path="/issf" element={<ISSF />} />
-          <Route path="/issc" element={<ISSC />} />
-          <Route path="/csc" element={<CSC />} />
-          <Route path="/hacktivate" element={<Hacktivate />} />
-          <Route path="/competition" element={<Competition />} />
-          <Route path="/programs-report" element={<Programs />} />
-          <Route path="/young-fellows-program" element={<YoungFellows />} />
-          <Route path="/awarenes-campaign" element={<AwarenessCampaign />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/admin" element={<Dashboard />} />
-          <Route path="/research" element={<Research />} />
-          <Route
-            path="/young-people-resources"
-            element={<YoungPeopleResources />}
-          />
-        </Routes>
+        <ScrollToTop>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/young-people" element={<YoungPeople />} />
+            <Route path="/parent" element={<Parent />} />
+            <Route path="/educators" element={<Educators />} />
+            <Route path="/parent-resources" element={<ParentResources />} />
+            <Route
+              path="/educators-resources"
+              element={<EducatorsResources />}
+            />
+            <Route path="/general-resources" element={<GeneralResources />} />
+            <Route path="/issf" element={<ISSF />} />
+            <Route path="/issc" element={<ISSC />} />
+            <Route path="/csc" element={<CSC />} />
+            <Route path="/hacktivate" element={<Hacktivate />} />
+            <Route path="/competition" element={<Competition />} />
+            <Route path="/programs-report" element={<Programs />} />
+            <Route path="/young-fellows-program" element={<YoungFellows />} />
+            <Route path="/awarenes-campaign" element={<AwarenessCampaign />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/safer-gambling" element={<SaferGamble />} />
+            <Route path="/admin" element={<Dashboard />} />
+            <Route path="/research" element={<Research />} />
+            <Route
+              path="/young-people-resources"
+              element={<YoungPeopleResources />}
+            />
+          </Routes>
+        </ScrollToTop>
       </Layout>
     </Router>
   );

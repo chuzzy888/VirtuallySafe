@@ -4,75 +4,198 @@ import lvp from "../assets/images/lvp.png";
 import krs from "../assets/images/krs.png";
 import tns from "../assets/images/tns.png";
 import bmb from "../assets/images/bmb.png";
-import gnr from "../assets/images/pm.png";
-import rs1 from "../assets/images/rs1.jpg";
-import rs2 from "../assets/images/rs2.jpg";
-import rs3 from "../assets/images/rs3.jpg";
-import rs4 from "../assets/images/rs4.jpg";
+import { motion } from "framer-motion";
 import { MdKeyboardArrowRight } from "react-icons/md";
+import { FaRocket, FaGlobe } from "react-icons/fa"; // Importing icons from React Icons
+
 const resources = [
   {
-    image: rs1,
+    image:
+      "https://res.cloudinary.com/karotcloud/image/upload/v1739290106/rs1_ifkpq1.jpg",
     title: "Internet Safety Checklist",
     description: "For Parents & Students",
     link: "https://drive.google.com/file/d/1fp8xDlR0duJyM1SlyjG0MB9A2RjMpp1U/view?usp=sharing",
   },
   {
-    image: rs2,
+    image:
+      "https://res.cloudinary.com/karotcloud/image/upload/v1739289430/rs2_f2rwxy.jpg",
     title: "Navigating The Digital World",
     description:
       "A teen's guide to setting screen time limits for a balanced lifestyle",
     link: "https://drive.google.com/file/d/1KUPlTWk5kMlXKH_BiD93hvwQrWA99iT4/view?usp=sharing",
   },
   {
-    image: rs3,
+    image:
+      "https://res.cloudinary.com/karotcloud/image/upload/v1739289428/rs3_butprl.jpg",
     title: "Online Challenge And Young People",
     description:
       "Explore online challenges and their impact on young individuals",
     link: "https://drive.google.com/file/d/1qTj_wy9PaGqCEcL_mfVB10LNMUgLEHv3/view?usp=sharing",
   },
   {
-    image: rs4,
+    image:
+      "https://res-console.cloudinary.com/karotcloud/thumbnails/v1/image/upload/v1739289429/cnM0X3pmYzdqYw==/drilldown",
     title: "Protecting Our Precious Ones",
     description: "A comprehensive guide to combating online predators",
-    link: "https://drive.google.com/file/d/1Fu8Othum9WT-PttrKe0-J-QPo32zEhys/view?usp=sharing",
+    link: "https://res.cloudinary.com/karotcloud/image/upload/v1739289429/rs4_zfc7jc.jpg",
   },
 ];
 export default function Research() {
   return (
     <div>
-      <div
-        className="relative h-[400px] md:h-[600px] w-full bg-cover bg-center flex justify-center items-center font-josefin"
-        style={{
-          backgroundImage: `url(${gnr})`,
-        }}
-      >
-        {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black"></div>
-
-        {/* Content */}
-        <div className="relative z-10 text-center px-6 lg:px-16">
-          {/* Subtitle */}
-          <p className="text-green-400 text-base md:text-xl lg:text-2xl font-medium tracking-wide mb-4 ">
-            RESEARCH
-          </p>
-
-          {/* Title */}
-          <h1 className="text-white text-2xl md:text-4xl lg:text-5xl font-bold leading-relaxed lg:leading-tight mb-6 max-w-3xl mx-auto font-lato">
-            Virtual Safety Resources: Tips and tools for young people, parents,
-            and educators to navigate and stay safe online.
-          </h1>
-
-          {/* Optional CTA */}
-          <div className="mt-4">
-            {/* Button */}
-            <button className="bg-green-400 hover:bg-green-500 text-white font-medium text-sm md:text-lg px-5 py-3 rounded-lg shadow-lg  font-nouvelr">
-              Explore Our Programs Research
-            </button>
-          </div>
+      <section className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white overflow-hidden">
+        {/* Background Animated Gradients */}
+        <div className="absolute inset-0 pointer-events-none">
+          <motion.div
+            className="absolute w-64 h-64 bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-full blur-3xl"
+            initial={{ x: "-50%", y: "-50%", scale: 0.8 }}
+            animate={{
+              x: ["0%", "20%", "-20%", "0%"],
+              y: ["0%", "-30%", "30%", "0%"],
+              scale: [0.8, 1.2, 0.9, 1],
+            }}
+            transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
+          />
+          <motion.div
+            className="absolute w-80 h-80 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl left-1/3 top-1/4"
+            initial={{ x: "50%", y: "50%", scale: 0.8 }}
+            animate={{
+              x: ["0%", "-20%", "20%", "0%"],
+              y: ["0%", "30%", "-30%", "0%"],
+              scale: [0.8, 1.2, 0.9, 1],
+            }}
+            transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
+          />
         </div>
-      </div>
 
+        {/* Header Section */}
+        <div className="relative z-10 max-w-7xl mx-auto px-6 py-10 text-center">
+          <motion.div
+            className="space-y-6"
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-4xl md:text-6xl font-bold leading-tight font-nouvelr bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">
+              Virtual Safety Research
+            </h1>
+            <p className="text-gray-300 text-lg md:text-xl font-lato max-w-2xl mx-auto">
+              Explore our extensive research—from engaging vox pop interviews
+              capturing real-world insights to in-depth studies on critical
+              issues like underage betting. Our findings drive our Virtual
+              Safety Resources, equipping young people, parents, and educators
+              with the knowledge and practical tips needed to navigate the
+              online world safely.
+            </p>
+          </motion.div>
+        </div>
+
+        {/* Research Documents Section */}
+        <div className="relative z-10 max-w-7xl mx-auto px-6 py-12">
+          <motion.div
+            className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-8 md:p-12 shadow-2xl"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold font-nouvelr mb-6 text-center">
+              Research Documents
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {resources.map((resource, index) => (
+                <motion.div
+                  key={index}
+                  className="bg-gray-800/50 backdrop-blur-md border border-white/20 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all"
+                  whileHover={{ scale: 1.05 }}
+                >
+                  {/* Image */}
+                  <img
+                    src={resource.image}
+                    alt={resource.title}
+                    className="h-40 w-full object-cover rounded-lg mb-4"
+                  />
+                  {/* Title */}
+                  <h3 className="text-xl font-bold font-nouvelr text-center mb-2 text-white">
+                    {resource.title}
+                  </h3>
+                  {/* Learn More Link */}
+                  <div className="flex justify-center mt-4">
+                    <motion.a
+                      href={resource.link}
+                      className="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-full transition-all shadow-lg hover:shadow-xl flex items-center gap-2"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      target="_blank"
+                    >
+                      Learn More
+                      <MdKeyboardArrowRight size={20} />
+                    </motion.a>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Mission Statement Section */}
+        <div className="relative z-10 max-w-7xl mx-auto px-6 py-12">
+          {/* Mission Statement Content */}
+          <motion.div
+            className="bg-gradient-to-r from-green-500 to-blue-500 rounded-2xl p-8 md:p-12 shadow-2xl text-center relative overflow-hidden"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            {/* Icons Inside the Card */}
+            <FaRocket className="absolute top-4 left-4 w-16 h-16 text-white opacity-30 transform -rotate-12" />
+            <FaGlobe className="absolute bottom-4 right-4 w-16 h-16 text-white opacity-30 transform rotate-12" />
+            {/* <FaShieldAlt className="absolute top-4 right-4 w-16 h-16 text-white opacity-30 transform -rotate-6 -translate-x-1/2 -translate-y-1/2" /> */}
+
+            {/* Mission Text */}
+            <div className="relative z-10">
+              <h2 className="text-3xl md:text-4xl font-bold font-nouvelr mb-6">
+                Our Mission
+              </h2>
+              <p className="text-gray-100 text-lg font-lato max-w-2xl mx-auto">
+                Our mission is to improve digital safety for internet users by
+                providing accessible resources, fostering collaboration, and
+                promoting best practices for online safety.
+              </p>
+            </div>
+          </motion.div>
+        </div>
+        {/* CTA Section */}
+        <div className="relative z-10 max-w-7xl mx-auto px-6 py-12">
+          <motion.div
+            className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-8 md:p-12 shadow-2xl text-center"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold font-nouvelr mb-6">
+              Stay Updated
+            </h2>
+            <p className="text-gray-300 text-lg font-lato mb-6">
+              Subscribe to receive updates, news, and exclusive content directly
+              to your inbox.
+            </p>
+            <div className="flex flex-col md:flex-row items-center justify-center gap-4">
+              <input
+                type="email"
+                placeholder="Enter Your Email Address"
+                className="w-full md:w-96 px-6 py-3 rounded-full bg-white/20 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-green-400"
+              />
+              <motion.button
+                className="bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-full shadow-lg hover:shadow-xl transition-all"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                Subscribe
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
       <section className="bg-[#F9F9F9] py-8">
         <div className="container mx-auto px-4">
           {/* Logos Container */}
@@ -108,48 +231,6 @@ export default function Research() {
               alt="Pedagon"
               className="h-10 grayscale hover:grayscale-0 transition duration-300"
             />
-          </div>
-        </div>
-      </section>
-      <section className="bg-white  h-8 md:h-10 w-full"></section>
-      <section
-        className=" py-12"
-        style={{
-          background:
-            "linear-gradient(116.68deg, rgba(0, 41, 75, 0.32) 0%, rgba(23, 80, 84, 0.32) 11.96%, rgba(41, 110, 91, 0.32) 21.11%, rgba(68, 156, 101, 0.32) 30.52%, rgba(75, 169, 104, 0.32) 33.98%, rgba(83, 182, 107, 0.32) 42.46%, rgba(80, 176, 105, 0.32) 45.83%, rgba(72, 163, 102, 0.32) 52.76%, rgba(46, 120, 93, 0.32) 71.43%, rgba(29, 90, 86, 0.32) 83.59%, rgba(0, 41, 75, 0.32) 97.4%)",
-        }}
-      >
-        <div className="container mx-auto px-6">
-          <h2 className="text-2xl font-bold text-[#00294B] mb-6 font-nouvelr">
-            Explore Resources
-          </h2>
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {resources.map((resource, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-200"
-              >
-                <img
-                  src={resource.image}
-                  alt={resource.title}
-                  className="h-40 w-full object-cover"
-                />
-                <div className="p-4">
-                  <h3 className="text-lg font-semibold text-[#00294B]">
-                    {resource.title}
-                  </h3>
-
-                  <a
-                    href={resource.link}
-                    className="text-green-600 font-medium flex items-center mt-4 hover:underline font-nouvelr"
-                    target="_blank"
-                  >
-                    Learn More
-                    <MdKeyboardArrowRight size={20} />
-                  </a>
-                </div>
-              </div>
-            ))}
           </div>
         </div>
       </section>

@@ -5,148 +5,173 @@ import lvp from "../assets/images/lvp.png";
 import krs from "../assets/images/krs.png";
 import tns from "../assets/images/tns.png";
 import bmb from "../assets/images/bmb.png";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedin,
+  FaPhoneAlt,
+  FaTwitter,
+} from "react-icons/fa";
+import { MdEmail, MdLocationOn } from "react-icons/md";
 
 export default function Contact() {
   return (
     <div>
-      <section className="bg-[#F9F9F9] py-12 px-6 lg:px-20 font-josefin">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-          {/* Left Image Section */}
-          <div className="flex justify-center">
-            <img
-              src={cutate}
-              alt="Contact Us"
-              className="w-full max-w-md lg:max-w-lg"
-            />
-          </div>
-
-          {/* Right Form Section */}
-          <div className="bg-white p-8 rounded-lg shadow-lg">
-            <h3 className="text-purple-600 text-lg font-semibold">
-              Contact us
-            </h3>
-            <h2 className="text-gray-800 text-2xl font-bold mt-2">
-              Speak with Experts
-            </h2>
-
-            <form className="mt-6 space-y-4">
-              {/* Name Field */}
-              <div>
-                <label
-                  htmlFor="name"
-                  className="block text-sm font-medium text-gray-700"
+      <div className="bg-gray-100 mb-10 ">
+        <div className="">
+          {/* Header */}
+          <section className="bg-[#00294B] text-white md:py-36 py-14 font-nouvelr">
+            <div className="container mx-auto px-6 text-center space-y-8">
+              <h1 className="text-4xl font-bold md:text-5xl">
+                We’d Love to Hear From You
+              </h1>
+              <p className="text-lg md:text-xl max-w-2xl mx-auto">
+                Whether you have a question, want to give feedback, or simply
+                want to connect, we’re here for you.
+              </p>
+              {/* Social Media Icons */}
+              <div className="flex justify-center space-x-6">
+                <a
+                  href="https://facebook.com"
+                  className="w-10 h-10 flex items-center justify-center bg-white rounded-full text-red-500 hover:bg-gray-200 transition"
+                  aria-label="Facebook"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  Name
-                </label>
+                  <FaFacebookF className="w-5 h-5" />
+                </a>
+                <a
+                  href="https://twitter.com"
+                  className="w-10 h-10 flex items-center justify-center bg-white rounded-full text-red-500 hover:bg-gray-200 transition"
+                  aria-label="Twitter"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaTwitter className="w-5 h-5" />
+                </a>
+                <a
+                  href="https://instagram.com"
+                  className="w-10 h-10 flex items-center justify-center bg-white rounded-full text-red-500 hover:bg-gray-200 transition"
+                  aria-label="Instagram"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaInstagram className="w-5 h-5" />
+                </a>
+                <a
+                  href="https://linkedin.com"
+                  className="w-10 h-10 flex items-center justify-center bg-white rounded-full text-red-500 hover:bg-gray-200 transition"
+                  aria-label="LinkedIn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaLinkedin className="w-5 h-5" />
+                </a>
+              </div>
+            </div>
+          </section>
+
+          {/* Contact Section */}
+          <div className="bg-white my-10 rounded-lg md:-mt-20  shadow-lg p-6 md:p-10 max-w-4xl mx-auto grid md:grid-cols-2 gap-6">
+            {/* Contact Info */}
+            <div className="relative bg-black text-white rounded-lg p-6 flex flex-col justify-center">
+              <img
+                src="https://res.cloudinary.com/karotcloud/image/upload/v1739462791/Qova%20ai/why1_brpm1s.jpg"
+                alt="Contact"
+                className="absolute inset-0 w-full h-full object-cover opacity-50 rounded-lg"
+              />
+              <div className="relative font-nouvelr">
+                <p className="mb-5 flex gap-3 items-center">
+                  <span className="bg-[#61CE70] h-8 w-8 rounded-full flex items-center justify-center ">
+                    <MdLocationOn />
+                  </span>
+                  147, Akowonjo Road.
+                </p>
+                <p className="mb-5 flex gap-3 items-center">
+                  <span className="bg-[#61CE70] h-8 w-8 rounded-full flex items-center justify-center">
+                    <MdEmail />
+                  </span>
+                  info@virtuallysafe.org
+                </p>
+                <p className="mb-5 flex gap-3 items-center">
+                  <span className="bg-[#61CE70] h-8 w-8 rounded-full flex items-center justify-center">
+                    <FaPhoneAlt />
+                  </span>
+                  +234 703 839 2825
+                </p>
+              </div>
+            </div>
+
+            {/* Contact Form */}
+            <div>
+              <h3 className="text-2xl font-bold mb-4 font-nouvelr ">
+                Get in Touch
+              </h3>
+              <p className="text-gray-600 mb-4">
+                Feel free to drop us a line below!
+              </p>
+              <form>
                 <input
                   type="text"
-                  id="name"
-                  placeholder="Enter your name"
-                  className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-purple-500 focus:border-purple-500"
+                  placeholder="Your Name"
+                  className="w-full p-3 border border-gray-300 rounded-lg mb-4 focus:ring-2 focus:ring-[#61CE70] focus:outline-none"
                 />
-              </div>
-
-              {/* Phone Number Field */}
-              <div>
-                <label
-                  htmlFor="phone"
-                  className="block text-sm font-medium text-gray-700"
-                >
-                  Phone Number
-                </label>
                 <input
-                  type="text"
-                  id="phone"
-                  placeholder="Enter your number"
-                  className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-purple-500 focus:border-purple-500"
+                  type="email"
+                  placeholder="Your Email"
+                  className="w-full p-3 border border-gray-300 rounded-lg mb-4 focus:ring-2 focus:ring-[#61CE70] focus:outline-none"
                 />
-              </div>
-
-              {/* Heading Field */}
-              <div>
-                <label
-                  htmlFor="heading"
-                  className="block text-sm font-medium text-gray-700"
-                >
-                  Heading
-                </label>
-                <input
-                  type="text"
-                  id="heading"
-                  placeholder="Heading"
-                  className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-purple-500 focus:border-purple-500"
-                />
-              </div>
-
-              {/* Description Field */}
-              <div>
-                <label
-                  htmlFor="description"
-                  className="block text-sm font-medium text-gray-700"
-                >
-                  Description
-                </label>
                 <textarea
-                  id="description"
-                  rows={4}
-                  placeholder="Enter message"
-                  className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-purple-500 focus:border-purple-500"
+                  placeholder="Type your message here..."
+                  className="w-full p-3 border border-gray-300 rounded-lg h-32 mb-4 focus:ring-2 focus:ring-[#61CE70] focus:outline-none"
                 ></textarea>
-              </div>
-
-              {/* Submit Button */}
-              <div>
-                <button
-                  type="submit"
-                  className="w-full bg-purple-600 text-white font-medium py-2 px-4 rounded-md hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500"
-                >
-                  Send
+                <button className="w-full bg-red-500 text-white py-3 rounded-lg font-bold text-lg hover:bg-red-600">
+                  SEND
                 </button>
+              </form>
+            </div>
+          </div>
+
+          <section className="bg-[#F9F9F9] py-8">
+            <div className="container mx-auto px-4">
+              {/* Logos Container */}
+              <div className="flex flex-wrap justify-center gap-8">
+                {/* Replace the src attributes with your logo images */}
+                <img
+                  src={gog}
+                  alt="Google"
+                  className="h-10 grayscale hover:grayscale-0 transition duration-300"
+                />
+                <img
+                  src={lvp}
+                  alt="LevelUp"
+                  className="h-10 grayscale hover:grayscale-0 transition duration-300"
+                />
+                <img
+                  src={krs}
+                  alt="Kairos"
+                  className="h-10 grayscale hover:grayscale-0 transition duration-300"
+                />
+                <img
+                  src={tns}
+                  alt="Teens Can Code"
+                  className="h-10 grayscale hover:grayscale-0 transition duration-300"
+                />
+                <img
+                  src={bmb}
+                  alt="Bambi"
+                  className="h-10 grayscale hover:grayscale-0 transition duration-300"
+                />
+                <img
+                  src={pdg}
+                  alt="Pedagon"
+                  className="h-10 grayscale hover:grayscale-0 transition duration-300"
+                />
               </div>
-            </form>
-          </div>
+            </div>
+          </section>
         </div>
-      </section>
-      <section className="bg-white  h-10 w-full"></section>
-      <section className="bg-[#F9F9F9] py-8">
-        <div className="container mx-auto px-4">
-          {/* Logos Container */}
-          <div className="flex flex-wrap justify-center gap-8">
-            {/* Replace the src attributes with your logo images */}
-            <img
-              src={gog}
-              alt="Google"
-              className="h-10 grayscale hover:grayscale-0 transition duration-300"
-            />
-            <img
-              src={lvp}
-              alt="LevelUp"
-              className="h-10 grayscale hover:grayscale-0 transition duration-300"
-            />
-            <img
-              src={krs}
-              alt="Kairos"
-              className="h-10 grayscale hover:grayscale-0 transition duration-300"
-            />
-            <img
-              src={tns}
-              alt="Teens Can Code"
-              className="h-10 grayscale hover:grayscale-0 transition duration-300"
-            />
-            <img
-              src={bmb}
-              alt="Bambi"
-              className="h-10 grayscale hover:grayscale-0 transition duration-300"
-            />
-            <img
-              src={pdg}
-              alt="Pedagon"
-              className="h-10 grayscale hover:grayscale-0 transition duration-300"
-            />
-          </div>
-        </div>
-      </section>
-      <section className="bg-white  h-10 w-full"></section>
+      </div>
     </div>
   );
 }

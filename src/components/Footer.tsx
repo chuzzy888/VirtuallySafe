@@ -1,5 +1,6 @@
-import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 import logo from "../assets/images/vlg.png";
+import { FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
   return (
@@ -84,12 +85,32 @@ const Footer = () => {
             <span className="hover:text-green-500 cursor-pointer">
               <FaFacebook />
             </span>
-            <span className="hover:text-green-500 cursor-pointer">
-              <FaTwitter />
-            </span>
-            <span className="hover:text-green-500 cursor-pointer">
-              <FaInstagram />
-            </span>
+            <a
+              href="https://x.com/Virtuallysafeng?t=hnY6iTg5mQP2nOQ8C7ZPMw&s=08"
+              target="_blank"
+            >
+              <span className="hover:text-green-500 cursor-pointer">
+                <FaXTwitter />
+              </span>
+            </a>
+            <a
+              href="https://www.instagram.com/virtuallysafe?igsh=MTZuYWM4NjFnYzRhYg=="
+              target="_blank"
+            >
+              {" "}
+              <span className="hover:text-green-500 cursor-pointer">
+                <FaInstagram />
+              </span>
+            </a>
+            <a
+              href="https://www.linkedin.com/company/106036032/admin/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BQwwoeE30SUu9Qv1iZmHWtw%3D%3D"
+              target="_blank"
+            >
+              {" "}
+              <span className="hover:text-green-500 cursor-pointer">
+                <FaLinkedin />
+              </span>
+            </a>
           </div>
         </div>
       </div>

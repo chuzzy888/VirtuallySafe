@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import logo from "../assets/images/vlg.png";
 import { TiArrowSortedDown } from "react-icons/ti";
 import { FiArrowUpRight } from "react-icons/fi";
 import { RiMenu3Fill } from "react-icons/ri";
 import { MdOutlineClose } from "react-icons/md";
 import { IoIosArrowDown } from "react-icons/io";
+import logo from "../assets/images/vlg.png";
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -260,7 +260,7 @@ const Navbar = () => {
                       Awareness / Campaign
                     </Link>
                   </li>
-                  <li>
+                  {/* <li>
                     <Link
                       to="#"
                       className="block py-2 hover:bg-gray-100 font-lato flex underline"
@@ -269,7 +269,7 @@ const Navbar = () => {
                       Cyber 360
                       <FiArrowUpRight size={20} />
                     </Link>
-                  </li>
+                  </li> */}
                   <li>
                     <Link
                       to="/young-fellows-program"
@@ -294,7 +294,7 @@ const Navbar = () => {
                       className="block py-2 hover:bg-gray-100 font-lato"
                       onClick={closeMobileMenu}
                     >
-                      ISSC
+                      School Club
                     </Link>
                   </li>
                   <li>
@@ -376,14 +376,17 @@ const Navbar = () => {
           {/* Desktop Menu */}
           <ul className="md:flex space-x-8 items-center hidden font-lato text-lg">
             <li>
-              <Link to="/" className="text-[#61CE70] text-lg font-[400]">
+              <Link
+                to="/"
+                className="hover:text-[#61CE70] text-[#F9F9F9] text-lg font-[400]"
+              >
                 Home
               </Link>
             </li>
             <li className="relative">
               <button
                 onClick={() => toggleMenu("WhoWeServe")}
-                className="text-[#F9F9F9] flex gap-2 items-center text-lg font-[400]"
+                className="text-[#F9F9F9] hover:text-[#61CE70] flex gap-2 items-center text-lg font-[400]"
               >
                 Who we serve
                 <TiArrowSortedDown />
@@ -423,7 +426,7 @@ const Navbar = () => {
             <li className="relative">
               <button
                 onClick={() => toggleMenu("Resources")}
-                className="text-[#F9F9F9] flex gap-2 items-center text-lg font-[400]"
+                className="text-[#F9F9F9] flex gap-2 hover:text-[#61CE70] items-center text-lg font-[400]"
               >
                 Resources
                 <TiArrowSortedDown />
@@ -481,7 +484,7 @@ const Navbar = () => {
             <li className="relative">
               <button
                 onClick={() => toggleMenu("Games")}
-                className="text-[#F9F9F9] flex gap-2 items-center text-lg font-[400]"
+                className="text-[#F9F9F9] flex gap-2 hover:text-[#61CE70] items-center text-lg font-[400]"
               >
                 Games
                 <TiArrowSortedDown />
@@ -517,7 +520,7 @@ const Navbar = () => {
             <li className="relative">
               <button
                 onClick={() => toggleMenu("Policy")}
-                className="text-[#F9F9F9] flex gap-2 items-center text-lg font-[400]"
+                className="text-[#F9F9F9] flex gap-2 hover:text-[#61CE70] items-center text-lg font-[400]"
               >
                 Programs
                 <TiArrowSortedDown />
@@ -576,7 +579,7 @@ const Navbar = () => {
                       Awareness / Campaign
                     </Link>
                   </li>
-                  <li>
+                  {/* <li>
                     <Link
                       to="#"
                       className="block px-4 py-4 hover:bg-gray-100 text-left flex underline"
@@ -584,7 +587,7 @@ const Navbar = () => {
                       Cyber 360
                       <FiArrowUpRight size={20} />
                     </Link>
-                  </li>
+                  </li> */}
                   <li>
                     <Link
                       to="/young-fellows-program"
@@ -606,7 +609,7 @@ const Navbar = () => {
                       to="/issc"
                       className="block px-4 py-4 hover:bg-gray-100 text-left"
                     >
-                      ISSC
+                      School Club
                     </Link>
                   </li>
                   <li>
@@ -621,7 +624,10 @@ const Navbar = () => {
               )}
             </li>
             <li>
-              <Link to="#" className="text-lg text-[#F9F9F9] font-[400]">
+              <Link
+                to="#"
+                className="text-lg hover:text-[#61CE70] text-[#F9F9F9] font-[400]"
+              >
                 Volunteer
               </Link>
             </li>

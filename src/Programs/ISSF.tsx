@@ -4,37 +4,158 @@ import lvp from "../assets/images/lvp.png";
 import krs from "../assets/images/krs.png";
 import tns from "../assets/images/tns.png";
 import bmb from "../assets/images/bmb.png";
-import gnr from "../assets/images/gnr.png";
-import sg1 from "../assets/images/sg1.png";
+import issf from "../assets/images/fgi.png";
+import { motion } from "framer-motion";
 import { FaMicrophone, FaGamepad, FaBook, FaHandshake } from "react-icons/fa";
 import { MdLock, MdPublic, MdPrivacyTip } from "react-icons/md";
 export default function ISSF() {
   return (
-    <div className="font-josefin">
-      <div
-        className="relative h-auto py-10 md:h-[600px] w-full bg-cover bg-center flex justify-center items-center font-sans"
-        style={{
-          backgroundImage: `url(${gnr})`,
-        }}
-      >
-        {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-black opacity-60"></div>
-
-        {/* Content */}
-        <div className="relative z-10 text-center px-6 md:px-12">
-          <p className="text-green-400 text-sm md:text-lg font-medium mb-4 uppercase tracking-wider">
-            Internet Safety Stakeholders Forum
-          </p>
-          <h1 className="text-white text-2xl md:text-4xl lg:text-5xl font-bold leading-relaxed lg:leading-tight mb-6 max-w-3xl mx-auto font-lato">
-            Empowering Stakeholders to Build a Safer Internet Together
-          </h1>
-
-          <p className="text-white text-lg md:text-xl font-light max-w-3xl mx-auto">
-            Join industry experts, policymakers, and advocates in a
-            collaborative effort to create a safer online experience for all.
-          </p>
+    <div className="font-nouvelr">
+      <section className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white overflow-hidden">
+        {/* Background Animated Gradients */}
+        <div className="absolute inset-0 pointer-events-none">
+          <motion.div
+            className="absolute w-64 h-64 bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-full blur-3xl"
+            initial={{ x: "-50%", y: "-50%", scale: 0.8 }}
+            animate={{
+              x: ["0%", "20%", "-20%", "0%"],
+              y: ["0%", "-30%", "30%", "0%"],
+              scale: [0.8, 1.2, 0.9, 1],
+            }}
+            transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
+          />
+          <motion.div
+            className="absolute w-80 h-80 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl left-1/3 top-1/4"
+            initial={{ x: "50%", y: "50%", scale: 0.8 }}
+            animate={{
+              x: ["0%", "-20%", "20%", "0%"],
+              y: ["0%", "30%", "-30%", "0%"],
+              scale: [0.8, 1.2, 0.9, 1],
+            }}
+            transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
+          />
         </div>
-      </div>
+
+        {/* Section 1: Hero Section */}
+        <div className="relative z-10 max-w-7xl mx-auto px-6 py-12 flex flex-col items-center justify-center text-center">
+          <motion.div
+            className="space-y-6"
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <p className="text-green-400 text-sm md:text-lg font-semibold tracking-wide uppercase font-aeonik">
+              Internet Safety Stakeholders Forum (ISSF)
+            </p>
+            <h1 className="text-2xl md:text-6xl font-bold max-w-4xl leading-tight font-nouvelr bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">
+              Empowering Stakeholders to Build a Safer Internet Together
+            </h1>
+            <p className="text-gray-300 text-lg md:text-xl font-lato max-w-2xl mx-auto">
+              Protecting children and young people online is a shared
+              responsibility. The ISSF brings together policymakers, tech
+              companies, parents, educators, youth organizations, and more to
+              ensure a sustainable digital future.
+            </p>
+          </motion.div>
+        </div>
+
+        {/* Section 2: About Section */}
+        <div className="relative z-10 max-w-7xl mx-auto px-6 ">
+          <motion.div
+            className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-8 md:p-12 shadow-2xl flex flex-col md:flex-row items-center gap-8"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <div className="md:w-1/2">
+              <h2 className="text-3xl md:text-4xl font-bold font-nouvelr mb-6">
+                About the ISSF
+              </h2>
+              <p className="text-gray-300 text-lg font-lato">
+                The Internet Safety Stakeholders Forum (ISSF) is a
+                multi-stakeholder platform for discussing online safety and
+                public policy issues. It emerged from Virtually Safe’s Africa
+                Online Safety Fund initiatives in 2022, funded by Impact
+                Amplifier and Google.org. Together, we address challenges like
+                cyberthreats, digital well-being, and online safety trends.
+              </p>
+            </div>
+            <div className="md:w-1/2">
+              <img
+                src={issf} // Replace with the actual path to the flyer image
+                alt="ISSF Flyer"
+                className="w-full h-auto md:h-56 object-cover rounded-2xl shadow-lg"
+              />
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Section 3: Previous Event Highlights */}
+        <div className="relative z-10 max-w-7xl mx-auto px-6 py-12">
+          <motion.div
+            className="text-center"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold font-nouvelr mb-6">
+              Previous Event Highlights
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 font-lato justify-items-center">
+              {/* Highlight 1 */}
+              <motion.div
+                className="bg-gradient-to-r from-blue-100 to-blue-200 p-6 rounded-lg shadow-lg hover:shadow-2xl transition transform hover:scale-105 duration-300 text-center w-full max-w-lg"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <FaMicrophone className="text-4xl text-blue-600 mb-4 mx-auto" />
+                <p className="text-gray-700 text-base md:text-lg">
+                  Engaging panels on online grooming, cyberbullying, and online
+                  betting.
+                </p>
+              </motion.div>
+
+              {/* Highlight 2 */}
+              <motion.div
+                className="bg-gradient-to-r from-purple-100 to-purple-200 p-6 rounded-lg shadow-lg hover:shadow-2xl transition transform hover:scale-105 duration-300 text-center w-full max-w-lg"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <FaGamepad className="text-4xl text-purple-600 mb-4 mx-auto" />
+                <p className="text-gray-700 text-base md:text-lg">
+                  Interactive sessions with Virtually Safe’s Bambi Online Safety
+                  Board Game.
+                </p>
+              </motion.div>
+
+              {/* Highlight 3 */}
+              <motion.div
+                className="bg-gradient-to-r from-green-100 to-green-200 p-6 rounded-lg shadow-lg hover:shadow-2xl transition transform hover:scale-105 duration-300 text-center w-full max-w-lg"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <FaBook className="text-4xl text-green-600 mb-4 mx-auto" />
+                <p className="text-gray-700 text-base md:text-lg">
+                  Distribution of online safety resources like The Adventures of
+                  Chimamanda and Yusuf.
+                </p>
+              </motion.div>
+
+              {/* Highlight 4 */}
+              <motion.div
+                className="bg-gradient-to-r from-red-100 to-red-200 p-6 rounded-lg shadow-lg hover:shadow-2xl transition transform hover:scale-105 duration-300 text-center w-full max-w-lg"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <FaHandshake className="text-4xl text-red-600 mb-4 mx-auto" />
+                <p className="text-gray-700 text-base md:text-lg">
+                  Networking opportunities with industry leaders and advocates.
+                </p>
+              </motion.div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
 
       <section className="bg-[#F9F9F9] py-8">
         <div className="container mx-auto px-4">
@@ -76,105 +197,7 @@ export default function ISSF() {
       </section>
       <section className="bg-white  h-8 md:h-10 w-full"></section>
 
-      <section className="bg-[#F9F9F9] py-12 px-6 lg:px-20">
-        <div className="max-w-7xl mx-auto">
-          {/* Second Content Block */}
-          <div className="flex flex-col lg:flex-row items-center gap-6">
-            <div>
-              <h2 className="text-2xl lg:text-3xl font-bold text-gray-800 font-lato">
-                The Goal
-              </h2>
-              <p className="mt-4 text-gray-600 leading-relaxed font-lato max-w-5xl">
-                Protecting children and young people online is a shared
-                responsibility. The Internet Safety Stakeholders Forum (ISSF) is
-                a platform that brings together policymakers, tech companies,
-                parents, educators, youth organizations, industries, government
-                agencies, and more. Together, we ensure a sustainable future by
-                addressing the challenges and opportunities of the digital
-                world.
-              </p>
-            </div>
-            <img
-              src={sg1}
-              alt="Youth Gambling"
-              className="w-full h-56 object-cover  shadow-lg"
-            />
-          </div>
-        </div>
-      </section>
       <div className="bg-gray-100">
-        {/* Header Section */}
-        <section
-          className="text-center py-20 px-4"
-          style={{
-            background:
-              "linear-gradient(116.68deg, rgba(0, 41, 75, 0.32) 0%, rgba(23, 80, 84, 0.32) 11.96%, rgba(41, 110, 91, 0.32) 21.11%, rgba(68, 156, 101, 0.32) 30.52%, rgba(75, 169, 104, 0.32) 33.98%, rgba(83, 182, 107, 0.32) 42.46%, rgba(80, 176, 105, 0.32) 45.83%, rgba(72, 163, 102, 0.32) 52.76%, rgba(46, 120, 93, 0.32) 71.43%, rgba(29, 90, 86, 0.32) 83.59%, rgba(0, 41, 75, 0.32) 97.4%)",
-          }}
-        >
-          <div className="max-w-4xl mx-auto">
-            <h1 className="text-2xl md:text-3xl font-bold text-gray-800 font-nouvelr">
-              The ISSF serves as a multi-stakeholder platform for discussing
-              online safety and public policy issues.
-            </h1>
-            <p className="text-gray-700 mt-4  text-sm md:text-base font-lato">
-              It emerged from Virtually Safe’s Africa Online Safety Fund
-              initiatives in 2022, funded by Impact Amplifier and Google.org.
-              This forum fosters collaboration among internet stakeholders to
-              address key concerns like cyberthreats, digital well-being, and
-              online safety trends.
-            </p>
-          </div>
-
-          {/* Event Highlights Section */}
-          <section className="py-12 px-6  ">
-            <div className="max-w-6xl mx-auto">
-              {/* Section Heading */}
-              <h2 className="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-10 font-nouvelr">
-                Previous Event Highlights
-              </h2>
-
-              {/* Event Highlights Cards */}
-              <div className="flex flex-wrap justify-center gap-8 font-josefin">
-                {/* Highlight 1 */}
-                <div className="bg-gradient-to-r from-blue-100 to-blue-200 p-6 rounded-lg shadow-lg hover:shadow-2xl transition transform hover:scale-105 duration-300 text-center max-w-xs">
-                  <FaMicrophone className="text-4xl text-blue-600 mb-4" />
-                  <p className="text-gray-700 text-base md:text-lg">
-                    Engaging panel discussions on topics such as online
-                    grooming, cyberbullying, and online betting.
-                  </p>
-                </div>
-
-                {/* Highlight 2 */}
-                <div className="bg-gradient-to-r from-purple-100 to-purple-200 p-6 rounded-lg shadow-lg hover:shadow-2xl transition transform hover:scale-105 duration-300 text-center max-w-xs">
-                  <FaGamepad className="text-4xl text-purple-600 mb-4" />
-                  <p className="text-gray-700 text-base md:text-lg">
-                    Interactive sessions with Virtually Safe’s Bambi Online
-                    Safety Board Game.
-                  </p>
-                </div>
-
-                {/* Highlight 3 */}
-                <div className="bg-gradient-to-r from-green-100 to-green-200 p-6 rounded-lg shadow-lg hover:shadow-2xl transition transform hover:scale-105 duration-300 text-center max-w-xs">
-                  <FaBook className="text-4xl text-green-600 mb-4" />
-                  <p className="text-gray-700 text-base md:text-lg">
-                    Distribution of online safety resources like The Adventures
-                    of Chimamanda and Yusuf.
-                  </p>
-                </div>
-
-                {/* Highlight 4 */}
-                <div className="bg-gradient-to-r from-red-100 to-red-200 p-6 rounded-lg shadow-lg hover:shadow-2xl transition transform hover:scale-105 duration-300 text-center max-w-xs">
-                  <FaHandshake className="text-4xl text-red-600 mb-4" />
-                  <p className="text-gray-700 text-base md:text-lg">
-                    Networking opportunities with industry leaders and
-                    advocates.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </section>
-        </section>
-
         {/* Problem Statement Section */}
         <section className="bg-[#F9F9F9] py-12 px-6">
           <div className="max-w-6xl mx-auto text-center">
@@ -189,14 +212,14 @@ export default function ISSF() {
             </p>
 
             {/* Problem Cards */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 ">
               {/* Card 1 */}
               <div className="bg-purple-100 p-6 rounded-lg shadow-lg hover:shadow-xl transform transition-transform hover:-translate-y-3 duration-300">
                 <MdLock className="text-purple-600 text-5xl mb-4 mx-auto" />
                 <h3 className="text-2xl font-bold text-gray-800 mb-2 font-nouvelr">
                   Cyberthreats
                 </h3>
-                <p className="text-gray-700 text-base md:text-lg font-josefin">
+                <p className="text-gray-700 text-base md:text-lg font-lato">
                   Cyberthreats that compromise personal and organizational
                   security.
                 </p>
@@ -208,7 +231,7 @@ export default function ISSF() {
                 <h3 className="text-2xl font-bold text-gray-800 mb-2 font-nouvelr">
                   Digital Divide
                 </h3>
-                <p className="text-gray-700 text-base md:text-lg font-josefin">
+                <p className="text-gray-700 text-base md:text-lg font-lato">
                   Digital divides that exclude many from the benefits of the
                   online world.
                 </p>
@@ -220,7 +243,7 @@ export default function ISSF() {
                 <h3 className="text-2xl font-bold text-gray-800 mb-2 font-nouvelr">
                   Privacy Concerns
                 </h3>
-                <p className="text-gray-700 text-base md:text-lg font-josefin">
+                <p className="text-gray-700 text-base md:text-lg font-lato">
                   Privacy concerns in a rapidly evolving digital ecosystem.
                 </p>
               </div>
@@ -256,7 +279,7 @@ export default function ISSF() {
             <input
               type="email"
               placeholder="Email address"
-              className="w-2/3 md:w-1/2 lg:w-1/3 px-4 py-2 text-sm md:text-base border border-purple-300 rounded-l-lg focus:ring-2 focus:ring-purple-500 focus:outline-none"
+              className="w-2/3 md:w-1/2 lg:w-1/3 px-4 py-2 text-sm md:text-base border border-purple-300 rounded-l-lg focus:ring-0 focus:ring-purple-500 focus:outline-none"
             />
             <button
               type="submit"

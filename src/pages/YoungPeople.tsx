@@ -6,35 +6,47 @@ import tns from "../assets/images/tns.png";
 import bmb from "../assets/images/bmb.png";
 import pdg from "../assets/images/pdg.png";
 import ypg from "../assets/images/DSC_0089.jpg";
+
 export default function YoungPeople() {
   return (
-    <div>
-      <div
-        className="relative h-auto py-20 md:h-[620px] w-full bg-cover bg-center flex items-center justify-center"
-        style={{
-          backgroundImage: `url(${yp})`,
-        }}
-      >
-        {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/80 to-black/60"></div>
-
-        {/* Content */}
-        <div className="relative z-10 text-center px-6 md:px-12 max-w-5xl">
-          {/* Subtitle */}
-          <p className="text-green-400 text-lg md:text-2xl font-semibold tracking-wider uppercase mb-5 font-nouvelr">
-            Young People
-          </p>
-
-          {/* Title */}
-          <h1 className="text-white text-xl md:text-5xl lg:text-6xl font-bold leading-tight md:mb-10 mb-5 font-nouvelr">
-            Educating and equipping the upcoming generation.
-          </h1>
-
-          <button className="bg-green-400 hover:bg-green-500 text-white font-medium text-sm md:text-lg px-5 py-3 rounded-lg shadow-lg  font-nouvelr">
-            Explore Our Programs Report
-          </button>
+    <div className="bg-gray-50 text-gray-900">
+      <section className="relative py-16">
+        {/* Background Image with Dark Overlay */}
+        <div
+          className="absolute inset-0 bg-cover bg-center h-[400px] md:h-[450px] lg:h-[350px]"
+          style={{
+            backgroundImage:
+              "url('https://res.cloudinary.com/karotcloud/image/upload/v1740597943/Rectangle_1_ksazjz.png')",
+          }}
+        >
+          <div className="absolute inset-0 bg-black bg-opacity-80"></div>
         </div>
-      </div>
+
+        {/* Content Container */}
+        <div className="relative z-10 -mt-[120px] container mx-auto px-6 flex justify-center">
+          <div className=" bg-[#F9F9F9] rounded-2xl shadow-lg p-6 md:p-10 flex flex-col md:flex-row items-center md:items-start w-full md:max-w-4xl mt-40 md:mt-52 lg:mt-60">
+            {/* Image */}
+            <img
+              src={ypg}
+              alt="Event"
+              className="w-full h-full md:w-1/3 rounded-lg object-cover"
+            />
+
+            {/* Text Content */}
+            <div className="md:ml-6 mt-6 md:mt-0 text-center md:text-left">
+              <h2 className="text-2xl md:text-3xl font-bold text-[#00294B] font-nouvelr">
+                We serve Young People{" "}
+              </h2>
+              <p className="mt-4 text-gray-600  leading-relaxed">
+                One out of three internet users is a young person below the age
+                of 18 years, they are spending more and more of their time on
+                the Internet, learning, playing online games, browsing social
+                media, creating content and using mobile apps.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section className="bg-[#F9F9F9] py-8">
         <div className="container mx-auto px-4">
@@ -74,54 +86,37 @@ export default function YoungPeople() {
           </div>
         </div>
       </section>
-      <section className="bg-gradient-to-b from-[#851FEC] to-[#6B14BF] text-white px-6 md:px-12 lg:px-20 py-16 md:py-24 font-josefin">
-        {/* Header Section */}
-        <div className="text-center max-w-3xl mx-auto mb-12">
-          <h2 className="text-white font-extrabold text-3xl md:text-4xl leading-tight mb-4 font-nouvelr">
-            We Serve Young People
-          </h2>
-          <p className="text-base md:text-lg leading-relaxed font-medium font-nouvelr">
-            One out of three internet users is a young person below the age of
-            18. They are spending more time online—learning, playing games,
-            browsing social media, creating content, and using mobile apps.
-          </p>
-        </div>
-
-        {/* Content Section */}
-        <div className="flex flex-col md:flex-row items-center gap-12 md:gap-20">
-          {/* Image Section */}
-          <div className="w-full md:w-1/2 flex justify-center">
-            <img
-              src={ypg}
-              alt="Children smiling"
-              className=" shadow-2xl w-full max-w-[450px] md:max-w-[450px] object-cover"
-            />
+      <section className="relative py-16 bg-[#851FEC] flex justify-center items-center">
+        <div className="container mx-auto px-6 flex flex-col md:flex-row items-center">
+          {/* Image Container */}
+          <div className="relative w-full md:w-1/2 flex justify-center">
+            <div className="relative">
+              <img
+                src={yp}
+                alt="Young People Learning"
+                className="w-full max-w-md md:max-w-lg rounded-lg shadow-xl transform rotate-3"
+              />
+              <div className="absolute inset-0 border-4 border-green-400 rounded-lg transform -rotate-6"></div>
+            </div>
           </div>
 
-          {/* Text Section */}
-          <div className="w-full md:w-1/2 text-center md:text-left space-y-10">
-            <p className="text-[#F9F9F9] text-base md:text-lg leading-relaxed font-lato">
-              The Internet offers young people an exciting space to learn, shop,
-              create, and connect. However, they are also vulnerable to risks
-              such as cyberbullying, exploitation, and exposure to harmful
-              content.
+          {/* Text Content */}
+          <div className="w-full md:w-1/2 mt-10 md:mt-0 text-white md:text-left text-center px-1 md:px-8">
+            <h2 className="text-xl md:text-4xl font-extrabold font-nouvelr md:max-w-lg">
+              Educating and equipping the upcoming generation.
+            </h2>
+
+            <p className="mt-4 text-white leading-relaxed text-sm md:text-lg ">
+              The internet offers young people opportunities to learn, create,
+              and connect, but it also exposes them to risks like cyberbullying,
+              identity theft, and harmful content. Virtually Safe is committed
+              to ensuring a secure and enriching online space by providing
+              resources that protect young users from digital dangers while
+              fostering their well-being as they navigate the digital world.
             </p>
-            <p className="text-[#F9F9F9] text-base md:text-lg leading-relaxed font-lato">
-              Virtually Safe is committed to providing a secure and enriching
-              online environment. We equip young users with the resources they
-              need to stay safe and thrive in the digital space.
-            </p>
-            {/* Button */}
-            <div className="flex justify-center md:justify-start">
-              <button className="bg-green-400 hover:bg-green-500 text-white font-medium text-sm md:text-lg px-5 py-3 rounded-lg shadow-lg w-full md:w-auto font-nouvelr">
-                Explore Our Programs
-              </button>
-            </div>
           </div>
         </div>
       </section>
-
-      <section className="bg-white  h-10  w-full"></section>
     </div>
   );
 }

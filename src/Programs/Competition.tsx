@@ -4,39 +4,81 @@ import lvp from "../assets/images/lvp.png";
 import krs from "../assets/images/krs.png";
 import tns from "../assets/images/tns.png";
 import bmb from "../assets/images/bmb.png";
-import adv from "../assets/images/adc.png";
-import cmp from "../assets/images/cmp.png";
-import cms from "../assets/images/cms.png";
-import atc from "../assets/images/atc.png";
+import cmp from "../assets/images/dbts.gif";
+import cms from "../assets/images/vd.mp4";
+import atc from "../assets/images/arts.gif";
+import { motion } from "framer-motion";
 
 export default function Competition() {
   return (
     <div>
       <div>
-        <div
-          className="relative h-auto py-14 md:h-[500px] w-full bg-cover bg-center flex justify-center items-center font-josefin"
-          style={{
-            backgroundImage: `url(${adv})`,
-          }}
-        >
-          {/* Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/90"></div>
+        <section className="relative py-32 bg-gradient-to-br from-[#4B0082] via-[#00294B] to-[#61CE70] overflow-hidden">
+          {/* Animated Background Shapes */}
+          <motion.div
+            className="absolute inset-0 z-0"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+          >
+            <motion.div
+              className="absolute top-16 left-16 w-32 h-32 bg-purple-400/20 rounded-full blur-3xl"
+              animate={{ x: [0, 20, 0], y: [0, 20, 0], scale: [1, 1.1, 1] }}
+              transition={{
+                duration: 6,
+                repeat: Infinity,
+                repeatType: "reverse",
+                ease: "easeInOut",
+              }}
+            ></motion.div>
+            <motion.div
+              className="absolute bottom-16 right-16 w-32 h-32 bg-blue-400/20 rounded-full blur-3xl"
+              animate={{ x: [0, -20, 0], y: [0, -20, 0], scale: [1, 1.1, 1] }}
+              transition={{
+                duration: 8,
+                repeat: Infinity,
+                repeatType: "reverse",
+                ease: "easeInOut",
+              }}
+            ></motion.div>
+          </motion.div>
 
-          {/* Content */}
-          <div className="relative z-10 text-center px-6 lg:px-12">
-            {/* Subtitle */}
-            <p className="text-green-400 text-base md:text-lg lg:text-xl font-medium tracking-wide mb-4 uppercase">
-              competition
-            </p>
+          {/* Content Container */}
+          <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
+            <motion.h1
+              className="text-5xl md:text-6xl font-bold text-white tracking-tight mb-6  font-nouvelr"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              whileHover={{ scale: 1.05 }}
+            >
+              Competitions
+            </motion.h1>
 
-            {/* Title */}
-            <h1 className="text-white text-xl md:text-3xl lg:text-4xl font-bold leading-relaxed lg:leading-tight mb-6 max-w-4xl mx-auto font-lato">
-              Virtually Safe organizes competitions to drive young people's
-              participation which includes <br /> (Debate, Skit competition, Art
-              Challenge).
-            </h1>
+            <motion.p
+              className="text-lg md:text-xl text-gray-200 font-light max-w-2xl mx-auto mb-8"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              Virtually Safe organizes competitions to engage young minds,
+              including Debate, Skit Competition, and Art Challenge.
+            </motion.p>
+
+            {/* CTA Button */}
+            <motion.a
+              href="#"
+              className="inline-block bg-[#4B0082] hover:bg-[#00294B] text-white font-semibold py-3 px-8 rounded-full shadow-lg transition-all text-lg"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              Join the Competition
+            </motion.a>
           </div>
-        </div>
+        </section>
 
         <section className="bg-[#F9F9F9] py-8">
           <div className="container mx-auto px-4">
@@ -84,7 +126,7 @@ export default function Competition() {
               <img
                 src={cmp}
                 alt="Debate Competition"
-                className="w-full h-auto"
+                className="w-full h-auto 2xl:h-72"
               />
             </div>
             <div className="md:w-1/2 flex flex-col space-y-5 lg:space-y-8">
@@ -122,14 +164,24 @@ export default function Competition() {
               </p>
             </div>
             <div className="md:w-1/2">
-              <img src={cms} alt="Skit Challenge" className="w-full h-auto" />
+              <video
+                src={cms}
+                autoPlay
+                loop
+                muted
+                className="w-full h-auto max-h-[400px] object-cover rounded-lg"
+              ></video>
             </div>
           </div>
 
           {/* Art Competition Section */}
           <div className="flex flex-col md:flex-row gap-8 lg:gap-6 bg-[#61CE70] items-center rounded-lg p-5 mx-5 md:p-8 lg:p-12 md:mx-20 my-10">
             <div className="md:w-1/2">
-              <img src={atc} alt="Art Competition" className="w-full h-auto" />
+              <img
+                src={atc}
+                alt="Art Competition"
+                className="w-full h-auto object-cover 2xl:h-72"
+              />
             </div>
             <div className="md:w-1/2 flex flex-col space-y-5 lg:space-y-8">
               <h2 className="text-[#FFFFFF] font-semibold text-3xl md:text-4xl font-nouvelr">

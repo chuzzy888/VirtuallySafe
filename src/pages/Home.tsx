@@ -1,7 +1,3 @@
-// Hero.tsx
-// import React, { useEffect, useState } from "react";
-import img1 from "../assets/images/ec.jpg";
-import img2 from "../assets/images/wsc.jpg";
 import img3 from "../assets/images/ct.jpg";
 import img4 from "../assets/images/awc.jpg";
 import gog from "../assets/images/gog.png";
@@ -24,217 +20,41 @@ import { RiPentagonLine, RiShapesFill } from "react-icons/ri";
 import { FaSquare, FaCircle, FaPlay } from "react-icons/fa";
 import { TbRectangleFilled } from "react-icons/tb";
 
-// const slides = [
-//   "Creating a better internet for young people",
-//   "Empowering youth with safe online spaces ",
-//   "Building innovative useful tools for online safety ",
-// ];
-
 const Home: React.FC = () => {
-  // const [currentSlide, setCurrentSlide] = useState(0);
-  // const [isIconVisible, setIsIconVisible] = useState(false);
+  // Animation variants
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
+  };
 
-  // Trigger icon animation after component mounts
-  // useEffect(() => {
-  //   setIsIconVisible(true);
-  // }, []);
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     setCurrentSlide(prev => (prev + 1) % slides.length);
-  //   }, 5000); // Auto-rotate slides every 5 seconds
-  //   return () => clearInterval(interval);
-  // }, []);
+  const fadeInLeft = {
+    hidden: { opacity: 0, x: -20 },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.8 } },
+  };
 
-  // const handleSlideChange = (index: number) => {
-  //   setCurrentSlide(index);
-  // };
+  const fadeInRight = {
+    hidden: { opacity: 0, x: 20 },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.8 } },
+  };
+
+  const staggerContainer = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const staggerItem = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  };
   return (
     <div>
-      {/* <div className="relative h-[600px] md:min-h-[700px] 2xl:h-screen w-full flex items-center justify-center text-center px-8 md:px-16 py-16 md:py-24">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: `url('y.svg')`,
-            filter: "brightness(13%)",
-          }}
-        ></div>
-
-        <div className="relative z-10 w-full max-w-6xl mx-auto">
-          <div
-            className={`flex justify-center mb-8 md:mb-12 transition-all duration-1000 ease-in-out ${
-              isIconVisible
-                ? "opacity-100 translate-y-0"
-                : "opacity-0 -translate-y-10"
-            }`}
-          >
-            <FaShieldAlt className="w-20 h-20 md:w-24 md:h-24 text-white animate-bounce" />
-          </div>
-
-          <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white leading-[1.3] md:leading-snug tracking-tight mb-8 md:mb-12 font-nouvelr animate-fade-in">
-            {slides[currentSlide]}
-          </h1>
-
-          <div className="flex justify-center space-x-6 md:space-x-5 mb-8 md:mb-12">
-            {slides.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => handleSlideChange(index)}
-                className={`h-3 w-3 rounded-full transition-all duration-300 ${
-                  currentSlide === index
-                    ? "bg-green-500 scale-125"
-                    : "bg-gray-400"
-                }`}
-              ></button>
-            ))}
-          </div>
-
-          <div className="flex justify-center">
-            <button className="bg-green-500 font-nouvelr hover:bg-green-600 text-white px-8 py-4 sm:px-8 sm:py-5 text-lg sm:text-xl font-semibold rounded-full transition-all duration-300 ease-in-out shadow-2xl hover:shadow-xl flex items-center gap-4 group">
-              Explore Programs
-              <FaArrowRight className="text-white text-lg sm:text-xl transition-transform duration-300 group-hover:translate-x-1" />
-            </button>
-          </div>
-        </div>
-      </div> */}
-      {/* <div className="relative flex flex-col  items-center justify-center text-center px-6  py-16 bg-gradient-to-br from-blue-100 via-purple-100 to-pink-100 overflow-hidden">
-        <FaCircle className="absolute top-8 left-12 text-blue-500 text-7xl opacity-50 " />
-        <FaSquare className="absolute top-16 right-16 text-orange-500 text-7xl  opacity-50 rotate-12 " />
-        <FaPlay className="absolute bottom-12 left-24 text-purple-500 text-7xl opacity-50 rotate-45 " />
-        <RiPentagonLine className="absolute bottom-0 -mb-7 left-1/2 text-red-400 text-7xl opacity-50 " />
-        <BsOctagonFill className="absolute bottom-82 right-16 text-green-500 text-7xl opacity-50 rotate-6 " />
-        <RiShapesFill className="absolute bottom-82 left-16 text-[#00294B] text-7xl opacity-50 rotate-6 " />
-        <TbRectangleFilled className="absolute bottom-8 right-16 text-yellow-500 text-7xl opacity-50 rotate-12 " />
-
-        <motion.h1
-          className="md:text-7xl text-4xl font-extrabold text-[#00294B] max-w-2xl font-nouvelr"
-          initial={{ opacity: 0, y: -30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-        >
-          The all-in-one for online safety
-        </motion.h1>
-
-        <motion.p
-          className="text-gray-700 max-w-lg mt-4 text-lg"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.2 }}
-        >
-          Join thousands of users securing their online presence with Virtually
-          Safe.
-        </motion.p>
-
-        <motion.button
-          className="mt-6 bg-[#00294B] text-white px-8 py-4 rounded-lg font-semibold hover:bg-gray-800 shadow-md hover:shadow-lg"
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          Start your free trial
-        </motion.button>
-
-        <div className="relative flex flex-wrap justify-center gap-8 mt-16">
-          <motion.img
-            src="https://res.cloudinary.com/karotcloud/image/upload/v1740493779/rs3_djdmfm.jpg"
-            alt="Online Security"
-            className="w-72 shadow-2xl rounded-xl rotate-[-8deg]"
-            initial={{ opacity: 0, x: -50, rotate: -10 }}
-            animate={{ opacity: 1, x: 0, rotate: -8 }}
-            transition={{ duration: 1 }}
-          />
-
-          <motion.img
-            src="https://res.cloudinary.com/karotcloud/image/upload/v1740493815/rs2_dbo9sw.jpg"
-            alt="Website Safety"
-            className="w-72 shadow-2xl rounded-xl rotate-4"
-            initial={{ opacity: 0, y: 50, rotate: 10 }}
-            animate={{ opacity: 1, y: 0, rotate: 4 }}
-            transition={{ duration: 1.2 }}
-          />
-
-          <motion.img
-            src="https://res.cloudinary.com/karotcloud/image/upload/v1740493939/rs4_vq71fu.jpg"
-            alt="Parental Control"
-            className="w-72 shadow-2xl rounded-xl rotate-[-4deg]"
-            initial={{ opacity: 0, x: 50, rotate: -10 }}
-            animate={{ opacity: 1, x: 0, rotate: -4 }}
-            transition={{ duration: 1.4 }}
-          />
-        </div>
-      </div> */}
-      {/* <div className="relative flex flex-col items-center justify-center text-center px-6 py-16 bg-gradient-to-br from-blue-100 via-purple-100 to-pink-100 overflow-hidden">
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="relative w-[1000px] h-[1000px] md:w-[1200px] md:h-[1200px]">
-            
-            <FaCircle className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-blue-500 text-6xl md:text-8xl opacity-50" />
-            <FaSquare className="absolute top-1/4 left-full transform -translate-x-1/2 -translate-y-1/2 text-orange-500 text-6xl md:text-8xl opacity-50 rotate-12" />
-            <FaPlay className="absolute top-3/4 left-full transform -translate-x-1/2 -translate-y-1/2 text-purple-500 text-6xl md:text-8xl opacity-50 rotate-45" />
-            <RiPentagonLine className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 text-red-400 text-6xl md:text-8xl opacity-50" />
-            <BsOctagonFill className="absolute top-1/4 right-full transform translate-x-1/2 -translate-y-1/2 text-green-500 text-6xl md:text-8xl opacity-50 rotate-6" />
-            <RiShapesFill className="absolute top-3/4 right-full transform translate-x-1/2 -translate-y-1/2 text-[#00294B] text-6xl md:text-8xl opacity-50 rotate-6" />
-            <TbRectangleFilled className="absolute top-1/2 left-0 transform -translate-x-1/2 -translate-y-1/2 text-yellow-500 text-6xl md:text-8xl opacity-50 rotate-12" />
-          </div>
-        </div>
-
-        <motion.h1
-          className="md:text-7xl text-4xl font-extrabold text-[#00294B] max-w-2xl font-nouvelr"
-          initial={{ opacity: 0, y: -30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-        >
-          The all-in-one for online safety
-        </motion.h1>
-
-        <motion.p
-          className="text-gray-700 max-w-lg mt-4 text-lg"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.2 }}
-        >
-          Join thousands of users securing their online presence with Virtually
-          Safe.
-        </motion.p>
-
-        <motion.button
-          className="mt-6 bg-[#00294B] text-white px-8 py-4 rounded-lg font-semibold hover:bg-gray-800 shadow-md hover:shadow-lg"
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          Start your free trial
-        </motion.button>
-
-        <div className="relative flex flex-wrap justify-center gap-8 mt-16">
-          <motion.img
-            src="https://res.cloudinary.com/karotcloud/image/upload/v1740493779/rs3_djdmfm.jpg"
-            alt="Online Security"
-            className="w-72 shadow-2xl rounded-xl rotate-[-8deg]"
-            initial={{ opacity: 0, x: -50, rotate: -10 }}
-            animate={{ opacity: 1, x: 0, rotate: -8 }}
-            transition={{ duration: 1 }}
-          />
-
-          <motion.img
-            src="https://res.cloudinary.com/karotcloud/image/upload/v1740493815/rs2_dbo9sw.jpg"
-            alt="Website Safety"
-            className="w-72 shadow-2xl rounded-xl rotate-4"
-            initial={{ opacity: 0, y: 50, rotate: 10 }}
-            animate={{ opacity: 1, y: 0, rotate: 4 }}
-            transition={{ duration: 1.2 }}
-          />
-
-          <motion.img
-            src="https://res.cloudinary.com/karotcloud/image/upload/v1740493939/rs4_vq71fu.jpg"
-            alt="Parental Control"
-            className="w-72 shadow-2xl rounded-xl rotate-[-4deg]"
-            initial={{ opacity: 0, x: 50, rotate: -10 }}
-            animate={{ opacity: 1, x: 0, rotate: -4 }}
-            transition={{ duration: 1.4 }}
-          />
-        </div>
-      </div> */}
       <div className="relative flex flex-col items-center justify-center text-center px-6 py-16 bg-gradient-to-br from-blue-100 via-purple-100 to-pink-100 overflow-hidden">
-        {/* Background Shapes - Circular Arrangement */}
         <div className="absolute inset-0 flex items-center justify-center">
-          {/* Increase the circle size to contain the content */}
           <div className="relative w-[1000px] h-[1000px] md:w-[1200px] md:h-[1200px]">
             {/* Icons positioned in a circle */}
             <FaCircle className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-blue-500 text-6xl md:block hidden md:text-8xl opacity-50 z-10" />
@@ -244,7 +64,6 @@ const Home: React.FC = () => {
             <BsOctagonFill className="absolute top-1/4 right-full transform translate-x-1/2 -translate-y-1/2 text-green-500 text-6xl md:text-8xl opacity-50 rotate-6 z-10" />
             <RiShapesFill className="absolute top-3/4 right-full transform translate-x-1/2 -translate-y-1/2 text-[#00294B] text-6xl md:text-8xl opacity-50 rotate-6 z-10" />
             <TbRectangleFilled className="absolute top-1/2 left-0 transform -translate-x-1/2 -translate-y-1/2 text-yellow-500 text-6xl md:text-8xl opacity-50 rotate-12 z-10" />
-            {/* Add the missing icon for the right side middle */}
             <FaStar className="absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2 text-pink-500 text-6xl md:text-8xl opacity-50 rotate-12 z-10" />
           </div>
         </div>
@@ -310,7 +129,7 @@ const Home: React.FC = () => {
         {/* Feature Images */}
         <div className="relative flex flex-wrap justify-center gap-8 mt-16 z-20 imghero">
           <motion.img
-            src="https://res.cloudinary.com/karotcloud/image/upload/v1740493779/rs3_djdmfm.jpg"
+            src="https://res.cloudinary.com/karotcloud/image/upload/v1740719513/rs4_vq71fu-min_patfjx.jpg"
             alt="Online Security"
             className="w-72 shadow-2xl rounded-xl rotate-[-8deg] imghero"
             initial={{ opacity: 0, x: -50, rotate: -10 }}
@@ -319,7 +138,7 @@ const Home: React.FC = () => {
           />
 
           <motion.img
-            src="https://res.cloudinary.com/karotcloud/image/upload/v1740493815/rs2_dbo9sw.jpg"
+            src="https://res.cloudinary.com/karotcloud/image/upload/v1740719517/rs2_dbo9sw-min_vwyhn9.jpg"
             alt="Website Safety"
             className="w-72 shadow-2xl rounded-xl rotate-4 imghero"
             initial={{ opacity: 0, y: 50, rotate: 10 }}
@@ -328,7 +147,7 @@ const Home: React.FC = () => {
           />
 
           <motion.img
-            src="https://res.cloudinary.com/karotcloud/image/upload/v1740493939/rs4_vq71fu.jpg"
+            src="https://res.cloudinary.com/karotcloud/image/upload/v1740719513/rs3_djdmfm-min_whjbox.jpg"
             alt="Parental Control"
             className="w-72 shadow-2xl rounded-xl rotate-[-4deg] imghero"
             initial={{ opacity: 0, x: 50, rotate: -10 }}
@@ -339,42 +158,29 @@ const Home: React.FC = () => {
       </div>
       <section className="bg-[#F9F9F9] py-8">
         <div className="container mx-auto px-4">
-          {/* Logos Container */}
-          <div className="flex flex-wrap justify-center gap-8">
-            {/* Replace the src attributes with your logo images */}
-            <img
-              src={gog}
-              alt="Google"
-              className="h-10 grayscale hover:grayscale-0 transition duration-300"
-            />
-            <img
-              src={lvp}
-              alt="LevelUp"
-              className="h-10 grayscale hover:grayscale-0 transition duration-300"
-            />
-            <img
-              src={krs}
-              alt="Kairos"
-              className="h-10 grayscale hover:grayscale-0 transition duration-300"
-            />
-            <img
-              src={tns}
-              alt="Teens Can Code"
-              className="h-10 grayscale hover:grayscale-0 transition duration-300"
-            />
-            <img
-              src={bmb}
-              alt="Bambi"
-              className="h-10 grayscale hover:grayscale-0 transition duration-300"
-            />
-            <img
-              src={pdg}
-              alt="Pedagon"
-              className="h-10 grayscale hover:grayscale-0 transition duration-300"
-            />
-          </div>
+          <motion.div
+            className="flex flex-wrap justify-center gap-8"
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            {/* Logos with Staggered Animation */}
+            {[gog, lvp, krs, tns, bmb, pdg].map((logo, index) => (
+              <motion.img
+                key={index}
+                src={logo}
+                alt="Logo"
+                className="h-10 grayscale hover:grayscale-0 transition duration-300"
+                variants={staggerItem}
+                whileHover={{ scale: 1.1 }} // Add hover effect
+              />
+            ))}
+          </motion.div>
         </div>
       </section>
+
+      {/* Discover Section */}
       <section
         id="discover"
         className="py-20 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50"
@@ -387,9 +193,10 @@ const Home: React.FC = () => {
           {/* Section Title */}
           <motion.h2
             className="text-[#00294B] text-center font-semibold text-3xl md:text-4xl mb-16 tracking-wider leading-tight font-nouvelr"
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            variants={fadeInUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
           >
             What We Do
           </motion.h2>
@@ -399,12 +206,16 @@ const Home: React.FC = () => {
             {/* Item 1: Text Left, Image Right */}
             <motion.div
               className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              variants={fadeInUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
             >
               {/* Text Section */}
-              <div className="p-8 bg-[#FFE5D9] rounded-xl shadow-lg">
+              <motion.div
+                className="p-8 bg-[#FFE5D9] rounded-xl shadow-lg order-1 md:order-1"
+                variants={fadeInLeft}
+              >
                 <h3 className="text-2xl font-bold font-nouvelr text-[#00294B] mb-4">
                   Support Young People, Parents, and Educators
                 </h3>
@@ -412,16 +223,17 @@ const Home: React.FC = () => {
                   To fully protect young people from online harm or exposure to
                   unacceptable online risk.
                 </p>
-              </div>
+              </motion.div>
 
               {/* Image Section */}
               <motion.div
-                className="flex justify-center"
+                className="flex justify-center order-2 md:order-2"
+                variants={fadeInRight}
                 whileHover={{ scale: 1.05, rotate: 2 }}
                 transition={{ duration: 0.3 }}
               >
                 <img
-                  src={img1}
+                  src="https://res.cloudinary.com/karotcloud/image/upload/v1739462791/Qova%20ai/why1_brpm1s.jpg"
                   alt="Support Young People"
                   className="w-full h-48 md:h-72 object-cover rounded-xl shadow-lg"
                 />
@@ -431,25 +243,30 @@ const Home: React.FC = () => {
             {/* Item 2: Image Left, Text Right */}
             <motion.div
               className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
+              variants={fadeInUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
             >
               {/* Image Section */}
               <motion.div
-                className="flex justify-center"
+                className="flex justify-center order-2 md:order-1"
+                variants={fadeInLeft}
                 whileHover={{ scale: 1.05, rotate: -2 }}
                 transition={{ duration: 0.3 }}
               >
                 <img
-                  src={img2}
+                  src="https://res.cloudinary.com/karotcloud/image/upload/v1740652704/ds1_llcmq2.jpg"
                   alt="Advocacy Policy"
                   className="w-full h-48 md:h-72 object-cover rounded-xl shadow-lg"
                 />
               </motion.div>
 
               {/* Text Section */}
-              <div className="p-8 bg-[#D8E2DC] rounded-xl shadow-lg">
+              <motion.div
+                className="p-8 bg-[#D8E2DC] rounded-xl shadow-lg order-1 md:order-2"
+                variants={fadeInRight}
+              >
                 <h3 className="text-2xl font-bold font-nouvelr text-[#00294B] mb-4">
                   Advocacy Policy
                 </h3>
@@ -458,18 +275,22 @@ const Home: React.FC = () => {
                   be entirely effective; we need expert knowledge grounded in
                   research.
                 </p>
-              </div>
+              </motion.div>
             </motion.div>
 
             {/* Item 3: Text Left, Image Right */}
             <motion.div
               className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
+              variants={fadeInUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
             >
               {/* Text Section */}
-              <div className="p-8 bg-[#F4ACB7] rounded-xl shadow-lg">
+              <motion.div
+                className="p-8 bg-[#F4ACB7] rounded-xl shadow-lg order-1 md:order-1"
+                variants={fadeInLeft}
+              >
                 <h3 className="text-2xl font-bold font-nouvelr text-[#00294B] mb-4">
                   Create Tools
                 </h3>
@@ -477,11 +298,12 @@ const Home: React.FC = () => {
                   Invest in strengthening systems, building capacities, and
                   innovative technology solutions to tackle online harms.
                 </p>
-              </div>
+              </motion.div>
 
               {/* Image Section */}
               <motion.div
-                className="flex justify-center"
+                className="flex justify-center order-2 md:order-2"
+                variants={fadeInRight}
                 whileHover={{ scale: 1.05, rotate: 2 }}
                 transition={{ duration: 0.3 }}
               >
@@ -496,13 +318,15 @@ const Home: React.FC = () => {
             {/* Item 4: Image Left, Text Right */}
             <motion.div
               className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.8 }}
+              variants={fadeInUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
             >
               {/* Image Section */}
               <motion.div
-                className="flex justify-center"
+                className="flex justify-center order-2 md:order-1"
+                variants={fadeInLeft}
                 whileHover={{ scale: 1.05, rotate: -2 }}
                 transition={{ duration: 0.3 }}
               >
@@ -514,7 +338,10 @@ const Home: React.FC = () => {
               </motion.div>
 
               {/* Text Section */}
-              <div className="p-8 bg-[#9D8189] rounded-xl shadow-lg">
+              <motion.div
+                className="p-8 bg-[#a5e29b] rounded-xl shadow-lg order-1 md:order-2"
+                variants={fadeInRight}
+              >
                 <h3 className="text-2xl font-bold font-nouvelr text-[#00294B] mb-4">
                   Awareness and Campaigns
                 </h3>
@@ -522,19 +349,22 @@ const Home: React.FC = () => {
                   Our goal is to keep young people safe online. We achieve this
                   through multiple campaigns and awareness programs.
                 </p>
-              </div>
+              </motion.div>
             </motion.div>
           </div>
         </div>
       </section>
+
+      {/* About Section */}
       <section className="bg-gradient-to-b from-[#00294B] to-[#001F3A] text-white font-sans">
         <div className="flex flex-col md:flex-row">
           {/* Text Section (Left Partition) */}
           <motion.div
             className="w-full md:w-1/2 flex items-center justify-center p-8 md:p-12 bg-[#00294B]"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            variants={fadeInLeft}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
           >
             <div className="max-w-xl space-y-6">
               <h2 className="text-[#61CE70] font-semibold text-2xl md:text-3xl tracking-wider leading-tight font-nouvelr">
@@ -553,19 +383,21 @@ const Home: React.FC = () => {
 
           {/* Image Section (Right Partition) */}
           <motion.div
-            className="w-full md:w-1/2  bg-gradient-to-br from-blue-100 via-purple-100 to-pink-100   flex items-center justify-center p-8 md:p-12"
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            className="w-full md:w-1/2 bg-gradient-to-br from-blue-100 via-purple-100 to-pink-100 flex items-center justify-center p-8 md:p-12"
+            variants={fadeInRight}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
           >
             <img
-              src={abtImg} // Replace with your image path
+              src={abtImg}
               alt="Children smiling"
               className="w-full h-auto rounded-xl rotate-3 hover:rotate-0 shadow-2xl transform transition-transform hover:scale-105 duration-300"
             />
           </motion.div>
         </div>
       </section>
+      {/* Our Goal Section */}
       <section
         className="w-full px-4 md:px-8 lg:px-16 py-12 md:py-20 font-josefin"
         style={{
@@ -576,10 +408,11 @@ const Home: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           {/* Our Goal Header */}
           <motion.h2
-            className="text-[#174F66] text-center font-semibold text-2xl md:text-3xl mb-10  tracking-wider leading-tight font-nouvelr"
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            className="text-[#174F66] text-center font-semibold text-2xl md:text-3xl mb-10 tracking-wider leading-tight font-nouvelr"
+            variants={fadeInUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
           >
             Our Goal
           </motion.h2>
@@ -589,22 +422,24 @@ const Home: React.FC = () => {
             {/* Left Side: Goal Text */}
             <motion.div
               className="lg:w-1/2 text-gray-800"
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              variants={fadeInLeft}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
             >
-              <h3 className="text-2xl md:text-4xl 2xl:text-5xl font-semibold leading-snug text-center md:text-start">
-                Virtually Safe is working towards creating a safer internet for
-                young people
+              <h3 className="text-lg bg-white md:p-8 p-3 md:text-2xl  rounded-lg 2xl:text-3xl font-semibold  leading-snug text-center md:text-start">
+                <span className="text-[#61CE70]">Virtually Safe</span> is
+                working towards creating a safer internet for young people
               </h3>
             </motion.div>
 
             {/* Right Side: Image */}
             <motion.div
               className="lg:w-1/2"
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
+              variants={fadeInRight}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
             >
               <img
                 src={og}
@@ -619,9 +454,10 @@ const Home: React.FC = () => {
             {/* Vision Box */}
             <motion.div
               className="bg-[#00294B] p-8 rounded-lg shadow-2xl text-white hover:shadow-3xl transition-shadow duration-300"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
+              variants={fadeInUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
             >
               <h4 className="text-2xl font-semibold mb-4 border-b-2 border-[#61CE70] pb-2">
                 Our Vision
@@ -636,9 +472,10 @@ const Home: React.FC = () => {
             {/* Mission Box */}
             <motion.div
               className="bg-[#851FEC] p-8 rounded-lg shadow-2xl text-white hover:shadow-3xl transition-shadow duration-300"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.8 }}
+              variants={fadeInUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
             >
               <h4 className="text-2xl font-semibold mb-4 border-b-2 border-[#FFD700] pb-2">
                 Our Mission
@@ -652,30 +489,38 @@ const Home: React.FC = () => {
           </div>
         </div>
       </section>
-      <section className="bg-[#00294B] py-10 flex justify-center">
+
+      {/* Impact Section */}
+      <section className="bg-[#00294B] py-12 flex justify-center">
         <div className="text-center">
-          <h2 className="text-[#61CE70] text-3xl font-extrabold mb-8  font-nouvelr">
+          <motion.h2
+            className="text-[#61CE70] text-3xl font-extrabold mb-8 font-nouvelr"
+            variants={fadeInUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
             Our Impact
-          </h2>
-          <div className="bg-[#112F4B] rounded-2xl px-16  py-10 flex md:flex-row flex-col gap-16 text-white items-center shadow-lg">
+          </motion.h2>
+          <div className="bg-[#112F4B] rounded-2xl px-16 py-10 flex md:flex-row flex-col gap-16 text-white items-center shadow-lg">
             <div className="text-center">
-              <p className="text-6xl md:text-7xl font-extrabold  font-nouvelr">
+              <p className="text-6xl md:text-7xl font-extrabold font-nouvelr">
                 1,000
               </p>
               <p className="text-lg opacity-90 mt-2 font-aeonik">Schools</p>
             </div>
-            <div className="md:w-1 md:h-20 h-1 w-20 bg-white/40"></div>
+            <div className="w-px h-12 bg-white/30"></div>
             <div className="text-center">
-              <p className="text-6xl md:text-7xl font-extrabold  font-nouvelr">
+              <p className="text-6xl md:text-7xl font-extrabold font-nouvelr">
                 100K+
               </p>
               <p className="text-lg opacity-90 mt-2 font-aeonik">
                 Students Impacted
               </p>
             </div>
-            <div className="md:w-1 md:h-20 h-1 w-20 bg-white/40"></div>
+            <div className="w-px h-12 bg-white/30"></div>
             <div className="text-center">
-              <p className="text-6xl md:text-7xl font-extrabold  font-nouvelr">
+              <p className="text-6xl md:text-7xl font-extrabold font-nouvelr">
                 5K+
               </p>
               <p className="text-lg opacity-90 mt-2 font-aeonik">
@@ -685,114 +530,149 @@ const Home: React.FC = () => {
           </div>
         </div>
       </section>
+
+      {/* Understanding Online Safety Section */}
       <section className="py-16 px-4 md:px-8 bg-white font-nouvelr">
-        {/* Section 1 */}
-        <h2 className="text-center text-2xl md:text-3xl font-bold text-gray-900 mb-8 font-nouvelr">
+        <motion.h2
+          className="text-center text-2xl md:text-3xl font-bold text-gray-900 mb-8 font-nouvelr"
+          variants={fadeInUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
           Understanding Online Safety
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-          <div className="bg-white p-6 rounded-xl shadow-md text-center">
-            <img
-              src="https://res.cloudinary.com/karotcloud/image/upload/v1740537066/Frame_1321315390_jkayjk.png"
-              alt="Online Safety"
-              className="mx-auto w-24 md:w-28"
-            />
-            <p className="text-gray-700 mt-4">
-              Young people agree that using the internet comes with significant
-              risks.
-            </p>
-          </div>
-          <div className="bg-white p-6 rounded-xl shadow-md text-center">
-            <img
-              src="https://res.cloudinary.com/karotcloud/image/upload/v1740536967/Frame_1321315390_x42xvq.png"
-              alt="Negative Online Experience"
-              className="mx-auto w-24 md:w-28"
-            />
-            <p className="text-gray-700 mt-4">
-              Many have experienced negative feelings following an online
-              interaction.
-            </p>
-          </div>
-          <div className="bg-white p-6 rounded-xl shadow-md text-center">
-            <img
-              src="https://res.cloudinary.com/karotcloud/image/upload/v1740536967/Frame_1321315390-1_weskx0.png"
-              alt="Reporting Issues"
-              className="mx-auto w-24 md:w-28"
-            />
-            <p className="text-gray-700 mt-4">
-              Few felt able to report issues to a trusted adult or their
-              parents.
-            </p>
-          </div>
-          <div className="bg-white p-6 rounded-xl shadow-md text-center">
+        </motion.h2>
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto"
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          {[
+            {
+              src: "https://res.cloudinary.com/karotcloud/image/upload/v1740537066/Frame_1321315390_jkayjk.png",
+              text: "Young people agree that using the internet comes with significant risks.",
+            },
+            {
+              src: "https://res.cloudinary.com/karotcloud/image/upload/v1740536967/Frame_1321315390_x42xvq.png",
+              text: "Many have experienced negative feelings following an online interaction.",
+            },
+            {
+              src: "https://res.cloudinary.com/karotcloud/image/upload/v1740536967/Frame_1321315390-1_weskx0.png",
+              text: "Few felt able to report issues to a trusted adult or their parents.",
+            },
+          ].map((item, index) => (
+            <motion.div
+              key={index}
+              className="bg-white p-6 rounded-xl shadow-md text-center"
+              variants={staggerItem}
+            >
+              <img
+                src={item.src}
+                alt="Online Safety"
+                className="mx-auto w-24 md:w-28"
+              />
+              <p className="text-gray-700 mt-4">{item.text}</p>
+            </motion.div>
+          ))}
+        </motion.div>
+        <div className=" flex max-w-3xl my-8  gap-6 mx-auto flex-wrap md:flex-nowrap">
+          <motion.div
+            className="bg-white p-6 rounded-xl shadow-md text-center"
+            variants={staggerItem}
+          >
             <img
               src="https://res.cloudinary.com/karotcloud/image/upload/v1740536967/Frame_1321315390-2_yvb30z.png"
-              alt="Parents and Teachers as Friends"
+              alt="Online Safety"
               className="mx-auto w-24 md:w-28"
             />
             <p className="text-gray-700 mt-4">
               Some young people have parents and teachers as friends on their
               social media pages.
             </p>
-          </div>
-          <div className="bg-white p-6 rounded-xl shadow-md text-center">
+          </motion.div>
+          <motion.div
+            className="bg-white p-6 rounded-xl shadow-md text-center"
+            variants={staggerItem}
+          >
             <img
               src="https://res.cloudinary.com/karotcloud/image/upload/v1740536967/Frame_1321315391_t1nzwq.png"
-              alt="Privacy Preferences"
+              alt="Online Safety"
               className="mx-auto w-24 md:w-28"
             />
             <p className="text-gray-700 mt-4">
               Many would prefer not to have these figures on their social media
               profiles.
             </p>
-          </div>
+          </motion.div>
         </div>
-
-        {/* Section 2 */}
-        <h2 className="text-center text-2xl md:text-3xl font-bold text-gray-900 mt-16 font-nouvelr mb-8">
+        {/* Understanding the Digital Risks Section */}
+        <motion.h2
+          className="text-center text-2xl md:text-3xl font-bold text-gray-900 mt-16 font-nouvelr mb-8"
+          variants={fadeInUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
           Understanding the Digital Risks Facing Our Youth
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-          <div className="bg-white p-6 rounded-xl shadow-md text-center">
-            <img
-              src="https://res.cloudinary.com/karotcloud/image/upload/v1740537265/Group_3_t27idf.png"
-              alt="Social Media Usage"
-              className="mx-auto w-24 md:w-28"
-            />
-            <p className="text-gray-700 mt-4">
-              Students actively use social media apps.
-            </p>
-          </div>
-          <div className="bg-white p-6 rounded-xl shadow-md text-center">
-            <img
-              src="https://res.cloudinary.com/karotcloud/image/upload/v1740537266/Group_3-1_g5gkpv.png"
-              alt="Online Exposure"
-              className="mx-auto w-24 md:w-28"
-            />
-            <p className="text-gray-700 mt-4">
-              Many students have been exposed to online pornography.
-            </p>
-          </div>
-          <div className="bg-white p-6 rounded-xl shadow-md text-center">
-            <img
-              src="https://res.cloudinary.com/karotcloud/image/upload/v1740537266/Group_3-2_eeceeh.png"
-              alt="Underage Betting"
-              className="mx-auto w-24 md:w-28"
-            />
-            <p className="text-gray-700 mt-4">
-              Some students have engaged in underage betting.
-            </p>
-          </div>
-        </div>
+        </motion.h2>
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto"
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          {[
+            {
+              src: "https://res.cloudinary.com/karotcloud/image/upload/v1740537265/Group_3_t27idf.png",
+              text: "Students actively use social media apps.",
+            },
+            {
+              src: "https://res.cloudinary.com/karotcloud/image/upload/v1740537266/Group_3-1_g5gkpv.png",
+              text: "Many students have been exposed to online pornography.",
+            },
+            {
+              src: "https://res.cloudinary.com/karotcloud/image/upload/v1740537266/Group_3-2_eeceeh.png",
+              text: "Some students have engaged in underage betting.",
+            },
+          ].map((item, index) => (
+            <motion.div
+              key={index}
+              className="bg-white p-6 rounded-xl shadow-md text-center"
+              variants={staggerItem}
+            >
+              <img
+                src={item.src}
+                alt="Digital Risks"
+                className="mx-auto w-24 md:w-28"
+              />
+              <p className="text-gray-700 mt-4">{item.text}</p>
+            </motion.div>
+          ))}
+        </motion.div>
       </section>
 
-      <section className="bg-[#851FEC] text-white py-12 px-4 md:px-8 lg:px-16 relative overflow-hidden ">
-        {/* Content Wrapper */}
+      {/* Children's Rights Section */}
+      <section className="bg-[#851FEC] text-white py-12 px-4 md:px-8 lg:px-16 relative overflow-hidden">
         <div className="max-w-4xl mx-auto text-center">
-          <p className="text-center font-semibold text-lg md:text-2xl mb-5 uppercase tracking-wider leading-tight underline decoration-2 font-nouvelr  text-[#FFFFFF]">
+          <motion.p
+            className="text-center font-semibold text-lg md:text-2xl mb-5 uppercase tracking-wider leading-tight underline decoration-2 font-nouvelr text-[#FFFFFF]"
+            variants={fadeInUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
             Children's Rights
-          </p>
-          <h2 className="text-2xl md:text-3xl font-semibold leading-relaxed font-nouvelr mb-4">
+          </motion.p>
+          <motion.h2
+            className="text-2xl md:text-3xl font-semibold leading-relaxed font-nouvelr mb-4"
+            variants={fadeInUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
             The rights of every child must be respected, protected and fulfilled
             in the digital space.
             <a
@@ -801,29 +681,19 @@ const Home: React.FC = () => {
             >
               see more...
             </a>
-          </h2>
+          </motion.h2>
         </div>
 
         {/* Image Section */}
-
-        <img
+        <motion.img
           src="https://res.cloudinary.com/karotcloud/image/upload/v1740585444/chr_yrtjgp.jpg"
           alt="Children Rights"
-          className="rounded-lg w-full max-w-lg mx-auto object-cover"
+          className="rounded-lg w-full max-w-lg mx-auto object-cover mt-8"
+          variants={fadeInUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
         />
-
-        {/* Decorative Shapes */}
-        {/* <img
-          src={blob}
-          alt=""
-          className="absolute top-[-30px] left-[-40px] w-24 h-24 md:w-96 md:h-96 "
-        />
-
-        <img
-          src={blob}
-          alt=""
-          className="absolute bottom-[-30px] right-[-40px] w-28 h-28 md:w-48 md:h-48 "
-        /> */}
       </section>
       <section className="bg-[#F9F9F9] py-12 px-4 md:px-8 lg:px-16">
         {/* Header Content */}

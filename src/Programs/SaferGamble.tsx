@@ -125,7 +125,7 @@ export default function SaferGamble() {
             {/* Content */}
             <div className="relative z-10 grid md:grid-cols-2 gap-8 items-center">
               <div>
-                <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 font-nouvelr">
+                <h2 className="text-xl md:text-4xl font-bold text-white mb-6 font-nouvelr">
                   Safer Gambling
                 </h2>
                 <p className="text-lg text-white/90 mb-6">
@@ -135,7 +135,7 @@ export default function SaferGamble() {
                 </p>
                 <div className="space-y-4">
                   <motion.div
-                    className="flex items-center space-x-4 p-4 bg-white/10 backdrop-blur-sm rounded-lg hover:bg-white/20 transition-colors"
+                    className="flex md:flex-row flex-col items-center space-x-4 p-4 bg-white/10 backdrop-blur-sm rounded-lg hover:bg-white/20 transition-colors"
                     whileHover={{ scale: 1.02 }}
                   >
                     <div className="p-3 bg-white/20 rounded-full">
@@ -147,7 +147,7 @@ export default function SaferGamble() {
                     </p>
                   </motion.div>
                   <motion.div
-                    className="flex items-center space-x-4 p-4 bg-white/10 backdrop-blur-sm rounded-lg hover:bg-white/20 transition-colors"
+                    className="flex items-center md:flex-row flex-col space-x-4 p-4 bg-white/10 backdrop-blur-sm rounded-lg hover:bg-white/20 transition-colors"
                     whileHover={{ scale: 1.02 }}
                   >
                     <div className="p-3 bg-white/20 rounded-full">
@@ -200,12 +200,12 @@ export default function SaferGamble() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
               </div>
               <div>
-                <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 font-nouvelr">
+                <h2 className="text-xl md:text-4xl font-bold text-white mb-6 font-nouvelr">
                   Why Should We Care About Gambling Among Young People?
                 </h2>
                 <div className="space-y-4">
                   <motion.div
-                    className="flex items-center space-x-4 p-4 bg-white/10 backdrop-blur-sm rounded-lg hover:bg-white/20 transition-colors"
+                    className="flex items-center md:flex-row flex-col space-x-4 p-4 bg-white/10 backdrop-blur-sm rounded-lg hover:bg-white/20 transition-colors"
                     whileHover={{ scale: 1.02 }}
                   >
                     <div className="p-3 bg-white/20 rounded-full">
@@ -217,7 +217,7 @@ export default function SaferGamble() {
                     </p>
                   </motion.div>
                   <motion.div
-                    className="flex items-center space-x-4 p-4 bg-white/10 backdrop-blur-sm rounded-lg hover:bg-white/20 transition-colors"
+                    className="flex items-center md:flex-row flex-col space-x-4 p-4 bg-white/10 backdrop-blur-sm rounded-lg hover:bg-white/20 transition-colors"
                     whileHover={{ scale: 1.02 }}
                   >
                     <div className="p-3 bg-white/20 rounded-full">

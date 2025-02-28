@@ -18,7 +18,7 @@ const resources = [
   },
   {
     image:
-      "https://res.cloudinary.com/karotcloud/image/upload/v1739289430/rs2_f2rwxy.jpg",
+      "https://res.cloudinary.com/karotcloud/image/upload/v1740719517/rs2_dbo9sw-min_vwyhn9.jpg",
     title: "Navigating The Digital World",
     description:
       "A teen's guide to setting screen time limits for a balanced lifestyle",
@@ -26,7 +26,7 @@ const resources = [
   },
   {
     image:
-      "https://res.cloudinary.com/karotcloud/image/upload/v1739289428/rs3_butprl.jpg",
+      "https://res.cloudinary.com/karotcloud/image/upload/v1740719513/rs3_djdmfm-min_whjbox.jpg",
     title: "Online Challenge And Young People",
     description:
       "Explore online challenges and their impact on young individuals",
@@ -34,7 +34,7 @@ const resources = [
   },
   {
     image:
-      "https://res-console.cloudinary.com/karotcloud/thumbnails/v1/image/upload/v1739289429/cnM0X3pmYzdqYw==/drilldown",
+      "https://res.cloudinary.com/karotcloud/image/upload/v1740719513/rs4_vq71fu-min_patfjx.jpg",
     title: "Protecting Our Precious Ones",
     description: "A comprehensive guide to combating online predators",
     link: "https://res.cloudinary.com/karotcloud/image/upload/v1739289429/rs4_zfc7jc.jpg",

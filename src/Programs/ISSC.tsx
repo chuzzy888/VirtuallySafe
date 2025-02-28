@@ -4,7 +4,6 @@ import lvp from "../assets/images/lvp.png";
 import krs from "../assets/images/krs.png";
 import tns from "../assets/images/tns.png";
 import bmb from "../assets/images/bmb.png";
-import yp from "../assets/images/yp.png";
 import { motion } from "framer-motion";
 import {
   FaUsers,

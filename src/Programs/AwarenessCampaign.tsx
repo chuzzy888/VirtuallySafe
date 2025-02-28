@@ -4,9 +4,7 @@ import scts from "../assets/images/abts.jpg";
 import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Thumbs } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/thumbs";
+import "swiper/swiper-bundle.css";
 
 const banners = [
   {

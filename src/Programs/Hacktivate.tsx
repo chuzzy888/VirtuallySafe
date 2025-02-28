@@ -9,9 +9,7 @@ import { FaLightbulb, FaUsers, FaCode } from "react-icons/fa";
 import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Thumbs } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/thumbs";
+import "swiper/swiper-bundle.css";
 
 const banners = [
   { id: 1, url: "b1.png", alt: "Banner 1" },

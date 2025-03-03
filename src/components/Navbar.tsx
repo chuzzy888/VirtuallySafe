@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { TiArrowSortedDown } from "react-icons/ti";
 import { FiArrowUpRight } from "react-icons/fi";
-import { RiMenu3Fill } from "react-icons/ri";
+import { RiCloseLargeLine, RiMenu3Fill } from "react-icons/ri";
 import { MdOutlineClose } from "react-icons/md";
 import { IoIosArrowDown } from "react-icons/io";
 import logo from "../assets/images/vlg.png";
@@ -62,10 +62,16 @@ const Navbar = () => {
           id="navbar-dropdown"
         >
           <ul className="space-y-12 p-4 text-[#F9F9F9] mt-10 px-8">
+            <button
+              onClick={closeMobileMenu}
+              className="absolute top-9 right-10"
+            >
+              <RiCloseLargeLine className="text-2xl" />
+            </button>
             <li>
               <Link
                 to="/"
-                className="text-[#61CE70] text-lg font-black font-lato"
+                className="text-[#61CE70] text-lg font-black font-nouvelr"
                 onClick={closeMobileMenu}
               >
                 Home
@@ -74,7 +80,7 @@ const Navbar = () => {
             <li className="relative">
               <button
                 onClick={() => toggleMenu("WhoWeServe")}
-                className="hover:text-gray-300 flex gap-2 items-center text-lg font-black font-lato w-full justify-between"
+                className="hover:text-gray-300 flex gap-2 items-center text-lg font-black font-nouvelr w-full justify-between"
               >
                 Who we serve
                 <IoIosArrowDown
@@ -122,7 +128,7 @@ const Navbar = () => {
             <li className="relative">
               <button
                 onClick={() => toggleMenu("Resources")}
-                className="hover:text-gray-300 flex gap-2 items-center text-lg font-black font-lato  w-full justify-between"
+                className="hover:text-gray-300 flex gap-2 items-center text-lg font-black font-nouvelr  w-full justify-between"
               >
                 Resources
                 <IoIosArrowDown
@@ -190,7 +196,7 @@ const Navbar = () => {
             <li className="relative">
               <button
                 onClick={() => toggleMenu("Policy")}
-                className="hover:text-gray-300 flex gap-2 items-center text-lg font-black font-lato  w-full justify-between"
+                className="hover:text-gray-300 flex gap-2 items-center text-lg font-black font-nouvelr w-full justify-between"
               >
                 Programs
                 <IoIosArrowDown
@@ -312,7 +318,7 @@ const Navbar = () => {
             <li className="relative">
               <button
                 onClick={() => toggleMenu("Games")}
-                className="hover:text-gray-300 flex gap-2 items-center text-lg font-black font-lato  w-full justify-between"
+                className="hover:text-gray-300 flex gap-2 items-center text-lg font-black font-nouvelr  w-full justify-between"
               >
                 Games
                 <IoIosArrowDown
@@ -353,7 +359,7 @@ const Navbar = () => {
             <li>
               <Link
                 to="#"
-                className="text-lg font-black font-lato "
+                className="text-lg font-black font-nouvelr "
                 onClick={closeMobileMenu}
               >
                 Volunteer
@@ -362,7 +368,7 @@ const Navbar = () => {
             <li>
               <Link
                 to="/contact"
-                className="bg-[#61CE70] px-8 py-3 font-lato rounded text-[#00294B] font-bold"
+                className="bg-[#61CE70] px-8 py-3 font-lato rounded-lg text-[#00294B] font-bold"
                 onClick={closeMobileMenu}
               >
                 Contact Us
@@ -372,13 +378,13 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Menu (hidden on mobile) */}
-        <div className="hidden lg:flex space-x-4">
+        <div className="hidden lg:flex space-x-4 ">
           {/* Desktop Menu */}
           <ul className="md:flex space-x-8 items-center hidden font-lato text-lg">
             <li>
               <Link
                 to="/"
-                className="hover:text-[#61CE70] text-[#F9F9F9] text-lg font-[400]"
+                className="hover:text-[#61CE70] font-nouvelr text-[#F9F9F9] text-lg font-[400]"
               >
                 Home
               </Link>
@@ -386,7 +392,7 @@ const Navbar = () => {
             <li className="relative">
               <button
                 onClick={() => toggleMenu("WhoWeServe")}
-                className="text-[#F9F9F9] hover:text-[#61CE70] flex gap-2 items-center text-lg font-[400]"
+                className="text-[#F9F9F9] hover:text-[#61CE70] flex gap-2 items-center text-lg font-[400] font-nouvelr"
               >
                 Who we serve
                 <TiArrowSortedDown />
@@ -426,7 +432,7 @@ const Navbar = () => {
             <li className="relative">
               <button
                 onClick={() => toggleMenu("Resources")}
-                className="text-[#F9F9F9] flex gap-2 hover:text-[#61CE70] items-center text-lg font-[400]"
+                className="text-[#F9F9F9] flex gap-2 hover:text-[#61CE70] items-center text-lg font-[400] font-nouvelr"
               >
                 Resources
                 <TiArrowSortedDown />
@@ -484,7 +490,7 @@ const Navbar = () => {
             <li className="relative">
               <button
                 onClick={() => toggleMenu("Games")}
-                className="text-[#F9F9F9] flex gap-2 hover:text-[#61CE70] items-center text-lg font-[400]"
+                className="text-[#F9F9F9] flex gap-2 hover:text-[#61CE70] items-center text-lg font-[400] font-nouvelr"
               >
                 Games
                 <TiArrowSortedDown />
@@ -520,7 +526,7 @@ const Navbar = () => {
             <li className="relative">
               <button
                 onClick={() => toggleMenu("Policy")}
-                className="text-[#F9F9F9] flex gap-2 hover:text-[#61CE70] items-center text-lg font-[400]"
+                className="text-[#F9F9F9] flex gap-2 hover:text-[#61CE70] items-center text-lg font-[400] font-nouvelr"
               >
                 Programs
                 <TiArrowSortedDown />
@@ -626,7 +632,7 @@ const Navbar = () => {
             <li>
               <Link
                 to="#"
-                className="text-lg hover:text-[#61CE70] text-[#F9F9F9] font-[400]"
+                className="text-lg hover:text-[#61CE70] text-[#F9F9F9] font-[400] font-nouvelr"
               >
                 Volunteer
               </Link>

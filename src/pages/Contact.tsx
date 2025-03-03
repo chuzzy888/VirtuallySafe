@@ -1,4 +1,3 @@
-import cutate from "../assets/images/cuate.png";
 import pdg from "../assets/images/pdg.png";
 import gog from "../assets/images/gog.png";
 import lvp from "../assets/images/lvp.png";

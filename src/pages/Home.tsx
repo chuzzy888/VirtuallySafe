@@ -6,8 +6,11 @@ import krs from "../assets/images/krs.png";
 import tns from "../assets/images/tns.png";
 import bmb from "../assets/images/bmb.png";
 import pdg from "../assets/images/pdg.png";
+import impc from "../assets/images/impc.svg";
+import krt from "../assets/images/Karot.svg";
+import qva from "../assets/images/QOVA LOGO.svg";
+import erg from "../assets/images/ERAGON 1.svg";
 import abtImg from "../assets/images/abt.jpg";
-import og from "../assets/images/og.png";
 import cs1 from "../assets/images/cs1.png";
 import cs2 from "../assets/images/cs2.png";
 import cs3 from "../assets/images/cs3.png";
@@ -19,6 +22,7 @@ import { motion } from "framer-motion";
 import { RiPentagonLine, RiShapesFill } from "react-icons/ri";
 import { FaSquare, FaCircle, FaPlay } from "react-icons/fa";
 import { TbRectangleFilled } from "react-icons/tb";
+import HeroSection from "./HeroSection";
 
 const Home: React.FC = () => {
   // Animation variants
@@ -53,109 +57,8 @@ const Home: React.FC = () => {
   };
   return (
     <div>
-      <div className="relative flex flex-col items-center justify-center text-center px-6 py-16 bg-gradient-to-br from-blue-100 via-purple-100 to-pink-100 overflow-hidden">
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="relative w-[1000px] h-[1000px] md:w-[1200px] md:h-[1200px]">
-            {/* Icons positioned in a circle */}
-            <FaCircle className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-blue-500 text-6xl md:block hidden md:text-8xl opacity-50 z-10" />
-            <FaSquare className="absolute top-1/4 left-full transform -translate-x-1/2 -translate-y-1/2 text-orange-500 text-6xl md:text-8xl opacity-50 rotate-12 z-10" />
-            <FaPlay className="absolute top-3/4 left-full transform -translate-x-1/2 -translate-y-1/2 text-purple-500 text-6xl md:text-8xl opacity-50 rotate-45 z-10" />
-            <RiPentagonLine className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 text-red-400 text-6xl md:text-8xl opacity-50 z-10" />
-            <BsOctagonFill className="absolute top-1/4 right-full transform translate-x-1/2 -translate-y-1/2 text-green-500 text-6xl md:text-8xl opacity-50 rotate-6 z-10" />
-            <RiShapesFill className="absolute top-3/4 right-full transform translate-x-1/2 -translate-y-1/2 text-[#00294B] text-6xl md:text-8xl opacity-50 rotate-6 z-10" />
-            <TbRectangleFilled className="absolute top-1/2 left-0 transform -translate-x-1/2 -translate-y-1/2 text-yellow-500 text-6xl md:text-8xl opacity-50 rotate-12 z-10" />
-            <FaStar className="absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2 text-pink-500 text-6xl md:text-8xl opacity-50 rotate-12 z-10" />
-          </div>
-        </div>
+      <HeroSection />
 
-        {/* Hero Content */}
-        <motion.h1
-          className="md:text-7xl text-4xl font-extrabold text-[#00294B] max-w-2xl font-nouvelr z-20"
-          initial={{ opacity: 0, y: -30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-        >
-          The all-in-one for online safety
-        </motion.h1>
-
-        <motion.p
-          className="text-gray-700 max-w-lg mt-4 text-lg z-20"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.2 }}
-        >
-          Join thousands of users securing their online presence with Virtually
-          Safe.
-        </motion.p>
-
-        <motion.a
-          href="#discover"
-          className="mt-6 bg-[#00294B] text-white px-8 py-4 rounded-full font-semibold hover:bg-gray-800 shadow-md hover:shadow-lg z-20 font-lato"
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          Discover More
-        </motion.a>
-        {/* <div className="relative flex items-center mt-16">
-          <motion.img
-            src="https://res.cloudinary.com/karotcloud/image/upload/v1740493779/rs3_djdmfm.jpg"
-            alt="User 1"
-            className="w-10 h-10 rounded-full border-2 border-white shadow-lg absolute left-0 z-30"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1 }}
-          />
-
-          <motion.img
-            src="https://res.cloudinary.com/karotcloud/image/upload/v1740493815/rs2_dbo9sw.jpg"
-            alt="User 2"
-            className="w-10 h-10 rounded-full border-2 border-white shadow-lg absolute left-6 z-20"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1.2 }}
-          />
-
-          <motion.img
-            src="https://res.cloudinary.com/karotcloud/image/upload/v1740493939/rs4_vq71fu.jpg"
-            alt="User 3"
-            className="w-10 h-10 rounded-full border-2 border-white shadow-lg absolute left-12 z-10"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1.4 }}
-          />
-
-          <p className="ml-24 text-gray-700 text-lg">+10,000 users joined</p>
-        </div> */}
-        {/* Feature Images */}
-        <div className="relative flex flex-wrap justify-center gap-8 mt-16 z-20 imghero">
-          <motion.img
-            src="https://res.cloudinary.com/karotcloud/image/upload/v1740719513/rs4_vq71fu-min_patfjx.jpg"
-            alt="Online Security"
-            className="w-72 shadow-2xl rounded-xl rotate-[-8deg] imghero"
-            initial={{ opacity: 0, x: -50, rotate: -10 }}
-            animate={{ opacity: 1, x: 0, rotate: -8 }}
-            transition={{ duration: 1 }}
-          />
-
-          <motion.img
-            src="https://res.cloudinary.com/karotcloud/image/upload/v1740719517/rs2_dbo9sw-min_vwyhn9.jpg"
-            alt="Website Safety"
-            className="w-72 shadow-2xl rounded-xl rotate-4 imghero"
-            initial={{ opacity: 0, y: 50, rotate: 10 }}
-            animate={{ opacity: 1, y: 0, rotate: 4 }}
-            transition={{ duration: 1.2 }}
-          />
-
-          <motion.img
-            src="https://res.cloudinary.com/karotcloud/image/upload/v1740719513/rs3_djdmfm-min_whjbox.jpg"
-            alt="Parental Control"
-            className="w-72 shadow-2xl rounded-xl rotate-[-4deg] imghero"
-            initial={{ opacity: 0, x: 50, rotate: -10 }}
-            animate={{ opacity: 1, x: 0, rotate: -4 }}
-            transition={{ duration: 1.4 }}
-          />
-        </div>
-      </div>
       <section className="bg-[#F9F9F9] py-8">
         <div className="container mx-auto px-4">
           <motion.div
@@ -166,16 +69,18 @@ const Home: React.FC = () => {
             viewport={{ once: true }}
           >
             {/* Logos with Staggered Animation */}
-            {[gog, lvp, krs, tns, bmb, pdg].map((logo, index) => (
-              <motion.img
-                key={index}
-                src={logo}
-                alt="Logo"
-                className="h-10 grayscale hover:grayscale-0 transition duration-300"
-                variants={staggerItem}
-                whileHover={{ scale: 1.1 }} // Add hover effect
-              />
-            ))}
+            {[gog, lvp, krs, tns, bmb, pdg, impc, krt, qva, erg].map(
+              (logo, index) => (
+                <motion.img
+                  key={index}
+                  src={logo}
+                  alt="Logo"
+                  className="h-10  transition duration-300"
+                  variants={staggerItem}
+                  whileHover={{ scale: 1.1 }}
+                />
+              )
+            )}
           </motion.div>
         </div>
       </section>
@@ -220,8 +125,9 @@ const Home: React.FC = () => {
                   Support Young People, Parents, and Educators
                 </h3>
                 <p className="text-gray-700 text-lg font-lato">
-                  To fully protect young people from online harm or exposure to
-                  unacceptable online risk.
+                  Equipping young people, parents, and educators with the
+                  resources they need to foster a culture of digital safety and
+                  well-being.
                 </p>
               </motion.div>
 
@@ -233,7 +139,7 @@ const Home: React.FC = () => {
                 transition={{ duration: 0.3 }}
               >
                 <img
-                  src="https://res.cloudinary.com/karotcloud/image/upload/v1739462791/Qova%20ai/why1_brpm1s.jpg"
+                  src="https://res.cloudinary.com/karotcloud/image/upload/v1740920297/wwd_vqul1a.jpg"
                   alt="Support Young People"
                   className="w-full h-48 md:h-72 object-cover rounded-xl shadow-lg"
                 />
@@ -256,7 +162,7 @@ const Home: React.FC = () => {
                 transition={{ duration: 0.3 }}
               >
                 <img
-                  src="https://res.cloudinary.com/karotcloud/image/upload/v1740652704/ds1_llcmq2.jpg"
+                  src="https://res.cloudinary.com/karotcloud/image/upload/v1741006530/ds1_llcmq2_t0tfdz.jpg"
                   alt="Advocacy Policy"
                   className="w-full h-48 md:h-72 object-cover rounded-xl shadow-lg"
                 />
@@ -356,7 +262,10 @@ const Home: React.FC = () => {
       </section>
 
       {/* About Section */}
-      <section className="bg-gradient-to-b from-[#00294B] to-[#001F3A] text-white font-sans">
+      <section
+        className="bg-gradient-to-b from-[#00294B] to-[#001F3A] text-white font-sans"
+        id="abts"
+      >
         <div className="flex flex-col md:flex-row">
           {/* Text Section (Left Partition) */}
           <motion.div
@@ -371,12 +280,18 @@ const Home: React.FC = () => {
                 About Us
               </h2>
               <p className="text-base md:text-lg leading-relaxed text-[#F9F9F9] font-lato">
-                We believe that the issues young people face online impact
-                families, schools, communities, and the nation at large. Record
-                levels of bullying, depression, self-harm, and identity theft
-                affect everyone, not just those directly involved. Protecting
-                children is a shared responsibility. Together, we can ensure a
-                safe future for all, both online and offline.
+                At Virtually Safe, we are at the forefront of championing online
+                safety for Africa’s children and youth. As a leading online
+                safety and digital well-being organization, we equip children,
+                parents, and educators with the tools and knowledge needed to
+                navigate the digital landscape responsibly. <br /> <br />
+                Through education, campaigns, advocacy, resources and
+                technology-driven solutions, we tackle the rising challenges of
+                digital harms, misinformation, online exploitation, and digital
+                addiction. <br /> <br /> At Virtually Safe, we believe digital
+                empowerment starts with digital safety. Join us as we shape a
+                digital world that is safe, empowering, and designed for
+                children and young people to thrive.—safely and confidently.
               </p>
             </div>
           </motion.div>
@@ -427,9 +342,10 @@ const Home: React.FC = () => {
               whileInView="visible"
               viewport={{ once: true }}
             >
-              <h3 className="text-lg bg-white md:p-8 p-3 md:text-2xl  rounded-lg 2xl:text-3xl font-semibold  leading-snug text-center md:text-start">
-                <span className="text-[#61CE70]">Virtually Safe</span> is
-                working towards creating a safer internet for young people
+              <h3 className="text-lg bg-white md:p-8 p-3 md:text-2xl  rounded-lg 2xl:text-2xl font-semibold  leading-snug text-center md:text-start">
+                At <span className="text-[#61CE70]"> Virtually Safe</span>, our
+                goal is to create a safe, inclusive, and empowering digital
+                environment for young people across Africa.
               </h3>
             </motion.div>
 
@@ -442,7 +358,7 @@ const Home: React.FC = () => {
               viewport={{ once: true }}
             >
               <img
-                src={og}
+                src="https://res.cloudinary.com/karotcloud/image/upload/v1740922403/IMG_3347_1_2_1_irf14i.jpg"
                 alt="Safer Internet"
                 className="w-full h-auto rounded-lg shadow-2xl transform transition-transform hover:scale-105 duration-300"
               />
@@ -463,9 +379,8 @@ const Home: React.FC = () => {
                 Our Vision
               </h4>
               <p className="text-lg leading-relaxed">
-                A safer digital world that is free from all forms of abuse,
-                exploitations and violence, one that prepares young people to
-                thrive in the digital space.
+                A digital world that is safe, empowering, and designed for
+                children and young people to thrive. .
               </p>
             </motion.div>
 
@@ -481,9 +396,11 @@ const Home: React.FC = () => {
                 Our Mission
               </h4>
               <p className="text-lg leading-relaxed">
-                To improve digital safety for internet users, support parents,
-                educators and young people in their digital wellbeing while
-                promoting the positive and enriching use of digital technology.
+                To drive systemic change that prioritizes online safety,
+                equipping young people, parents, and educators with the tools,
+                resources, and knowledge to navigate the digital landscape
+                securely and confidently—while empowering stakeholders to build
+                a safer internet for all.
               </p>
             </motion.div>
           </div>
@@ -532,7 +449,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* Understanding Online Safety Section */}
-      <section className="py-16 px-4 md:px-8 bg-white font-nouvelr">
+      <section className="py-16 px-4 md:px-8 bg-gradient-to-br from-blue-100 via-purple-100 to-pink-100 font-nouvelr">
         <motion.h2
           className="text-center text-2xl md:text-3xl font-bold text-gray-900 mb-8 font-nouvelr"
           variants={fadeInUp}
@@ -540,7 +457,7 @@ const Home: React.FC = () => {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          Understanding Online Safety
+          Evaluating Young People’s Online Experience In Nigeria.{" "}
         </motion.h2>
         <motion.div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto"
@@ -654,56 +571,85 @@ const Home: React.FC = () => {
         </motion.div>
       </section>
 
-      {/* Children's Rights Section */}
-      <section className="bg-[#851FEC] text-white py-12 px-4 md:px-8 lg:px-16 relative overflow-hidden">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.p
-            className="text-center font-semibold text-lg md:text-2xl mb-5 uppercase tracking-wider leading-tight underline decoration-2 font-nouvelr text-[#FFFFFF]"
-            variants={fadeInUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          >
-            Children's Rights
-          </motion.p>
-          <motion.h2
-            className="text-2xl md:text-3xl font-semibold leading-relaxed font-nouvelr mb-4"
-            variants={fadeInUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          >
-            The rights of every child must be respected, protected and fulfilled
-            in the digital space.
-            <a
-              href="#"
-              className="text-white underline text-sm ml-2 hover:text-gray-200"
-            >
-              see more...
-            </a>
-          </motion.h2>
+      <div
+        className="relative flex flex-col items-center justify-center text-center px-6 py-16 bg-gradient-to-br from-blue-100 via-purple-100 to-pink-100 overflow-hidden"
+        id="rsh"
+      >
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="relative w-[1000px] h-[1000px] md:w-[1200px] md:h-[1200px]">
+            <FaCircle className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-blue-500 text-6xl md:block hidden md:text-8xl opacity-50 z-10" />
+            <FaSquare className="absolute top-1/4 left-full transform -translate-x-1/2 -translate-y-1/2 text-orange-500 text-6xl md:text-8xl opacity-50 rotate-12 z-10" />
+            <FaPlay className="absolute top-3/4 left-full transform -translate-x-1/2 -translate-y-1/2 text-purple-500 text-6xl md:text-8xl opacity-50 rotate-45 z-10" />
+            <RiPentagonLine className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 text-red-400 text-6xl md:text-8xl opacity-50 z-10" />
+            <BsOctagonFill className="absolute top-1/4 right-full transform translate-x-1/2 -translate-y-1/2 text-green-500 text-6xl md:text-8xl opacity-50 rotate-6 z-10" />
+            <RiShapesFill className="absolute top-3/4 right-full transform translate-x-1/2 -translate-y-1/2 text-[#00294B] text-6xl md:text-8xl opacity-50 rotate-6 z-10" />
+            <TbRectangleFilled className="absolute top-1/2 left-0 transform -translate-x-1/2 -translate-y-1/2 text-yellow-500 text-6xl md:text-8xl opacity-50 rotate-12 z-10" />
+            <FaStar className="absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2 text-pink-500 text-6xl md:text-8xl opacity-50 rotate-12 z-10" />
+          </div>
         </div>
 
-        {/* Image Section */}
-        <motion.img
-          src="https://res.cloudinary.com/karotcloud/image/upload/v1740585444/chr_yrtjgp.jpg"
-          alt="Children Rights"
-          className="rounded-lg w-full max-w-lg mx-auto object-cover mt-8"
-          variants={fadeInUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        />
-      </section>
+        <motion.h1
+          className="md:text-5xl text-4xl font-extrabold text-[#00294B] max-w-2xl font-nouvelr z-20"
+          initial={{ opacity: 0, y: -30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+        >
+          Research & Data-Driven Insights
+        </motion.h1>
+
+        <motion.p
+          className="text-gray-700 max-w-lg mt-4 text-lg z-20"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.2 }}
+        >
+          We conduct localized research, surveys, and evidence-driven studies.
+        </motion.p>
+
+        <motion.a
+          href="#discover"
+          className="mt-6 bg-[#00294B] text-white px-8 py-4 rounded-full font-semibold hover:bg-gray-800 shadow-md hover:shadow-lg z-20 font-lato"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          Discover More
+        </motion.a>
+
+        <div className="relative flex flex-wrap justify-center gap-8 mt-16 z-20 imghero">
+          <motion.img
+            src="https://res.cloudinary.com/karotcloud/image/upload/v1740719513/rs4_vq71fu-min_patfjx.jpg"
+            alt="Online Security"
+            className="w-72 shadow-2xl rounded-xl rotate-[-8deg] imghero"
+            initial={{ opacity: 0, x: -50, rotate: -10 }}
+            animate={{ opacity: 1, x: 0, rotate: -8 }}
+            transition={{ duration: 1 }}
+          />
+
+          <motion.img
+            src="https://res.cloudinary.com/karotcloud/image/upload/v1740719517/rs2_dbo9sw-min_vwyhn9.jpg"
+            alt="Website Safety"
+            className="w-72 shadow-2xl rounded-xl rotate-4 imghero"
+            initial={{ opacity: 0, y: 50, rotate: 10 }}
+            animate={{ opacity: 1, y: 0, rotate: 4 }}
+            transition={{ duration: 1.2 }}
+          />
+
+          <motion.img
+            src="https://res.cloudinary.com/karotcloud/image/upload/v1740719513/rs3_djdmfm-min_whjbox.jpg"
+            alt="Parental Control"
+            className="w-72 shadow-2xl rounded-xl rotate-[-4deg] imghero"
+            initial={{ opacity: 0, x: 50, rotate: -10 }}
+            animate={{ opacity: 1, x: 0, rotate: -4 }}
+            transition={{ duration: 1.4 }}
+          />
+        </div>
+      </div>
       <section className="bg-[#F9F9F9] py-12 px-4 md:px-8 lg:px-16">
         {/* Header Content */}
         <div className="text-center mb-8">
-          <a
-            href="#"
-            className="text-[#00294B] text-center font-semibold text-lg md:text-2xl mb-5 uppercase tracking-wider leading-tight underline font-nouvelr decoration-2 "
-          >
+          <p className="text-[#00294B] text-center font-semibold text-lg md:text-3xl mb-5  tracking-wider leading-tight underline font-nouvelr decoration-2 ">
             Need Resources?
-          </a>
+          </p>
           <h2 className="text-2xl  md:text-3xl font-semibold mt-2 text-[#1E1E1E] font-nouvelr">
             We Provide a range of free resources for Parents, <br /> teachers
             and young people.
@@ -794,10 +740,6 @@ const Home: React.FC = () => {
           </div>
         </div>
       </div>
-      <section className="bg-white  h-20 md:h-30 w-full">
-        {/* Content Placeholder */}
-        <div className="flex justify-center items-center h-full"></div>
-      </section>
     </div>
   );
 };

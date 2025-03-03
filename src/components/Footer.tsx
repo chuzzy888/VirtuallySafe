@@ -1,6 +1,7 @@
 import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 import logo from "../assets/images/vlg.png";
 import { FaXTwitter } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -31,42 +32,70 @@ const Footer = () => {
 
         {/* Organization */}
         <div className="flex-1 mb-8 lg:mb-0">
-          <h3 className="text-lg font-semibold mb-4">Organization</h3>
+          <h3 className="text-lg font-semibold mb-4 font-nouvelr">Programs</h3>
           <ul className="space-y-2 text-gray-300">
-            <li className="hover:text-green-400 cursor-pointer">About</li>
-            <li className="hover:text-green-400 cursor-pointer">Our Service</li>
-            <li className="hover:text-green-400 cursor-pointer">Resources</li>
-            <li className="hover:text-green-400 cursor-pointer">Policy</li>
-            <li className="hover:text-green-400 cursor-pointer">Contact Us</li>
-            <li className="hover:text-green-400 cursor-pointer">Games</li>
+            <li className="hover:text-green-400 cursor-pointer">
+              <a
+                href="#abts"
+                onClick={e => {
+                  e.preventDefault();
+                  const target = document.querySelector("#abts");
+                  if (target) {
+                    target.scrollIntoView({
+                      behavior: "smooth",
+                      block: "start",
+                    });
+                  }
+                }}
+              >
+                About Us
+              </a>
+            </li>
+            <li className="hover:text-green-400 cursor-pointer">
+              <Link to={"/research"}> Research</Link>
+            </li>
+            <li className="hover:text-green-400 cursor-pointer">
+              <Link to={"/hacktivate"}>Hactivated</Link>
+            </li>
+            <li className="hover:text-green-400 cursor-pointer">
+              <Link to={"/Competition"}>Competitions</Link>
+            </li>
+            <li className="hover:text-green-400 cursor-pointer">
+              <Link to={"/contact"}>Contact Us</Link>
+            </li>
+            <li className="hover:text-green-400 cursor-pointer">
+              <Link to={"/issc"}>School Club</Link>
+            </li>
           </ul>
         </div>
 
         {/* Resources */}
         <div className="flex-1 mb-8 lg:mb-0">
-          <h3 className="text-lg font-semibold mb-4">Resources</h3>
+          <h3 className="text-lg font-semibold mb-4 font-nouvelr">Resources</h3>
           <ul className="space-y-2 text-gray-300">
             <li className="hover:text-green-400 cursor-pointer">
-              Our Programs Report
+              <Link to="/programs-report">Our Programs Report</Link>
             </li>
             <li className="hover:text-green-400 cursor-pointer">
-              Adventure of Chimamanda & Yusuf
+              <Link to="young-people-resources">Young People’s resources</Link>
             </li>
             <li className="hover:text-green-400 cursor-pointer">
-              Internet Safety Tips
+              <Link to={"/parent-resources"}>Parent resources</Link>
             </li>
             <li className="hover:text-green-400 cursor-pointer">
-              Digital Right
+              <Link to={"/educators-resources"}>Educators resources</Link>
             </li>
             <li className="hover:text-green-400 cursor-pointer">
-              Phishing Email Tips
+              <Link to={"/general-resources"}>General resources</Link>
             </li>
           </ul>
         </div>
 
         {/* Contact Us */}
         <div className="flex-1">
-          <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
+          <h3 className="text-lg font-semibold mb-4 font-nouvelr">
+            Contact Us
+          </h3>
           <p className="text-gray-300 mb-2">
             Email:{" "}
             <a

@@ -1,15 +1,15 @@
 import img3 from "../assets/images/ct.jpg";
 import img4 from "../assets/images/awc.jpg";
 import gog from "../assets/images/gog.png";
-import lvp from "../assets/images/lvp.png";
-import krs from "../assets/images/krs.png";
+import tta from "../assets/images/tta.svg";
+
 import tns from "../assets/images/tns.png";
-import bmb from "../assets/images/bmb.png";
+
 import pdg from "../assets/images/pdg.png";
 import impc from "../assets/images/impc.svg";
 import krt from "../assets/images/Karot.svg";
 import qva from "../assets/images/QOVA LOGO.svg";
-import erg from "../assets/images/ERAGON 1.svg";
+import erg from "../assets/images/erg.svg";
 import abtImg from "../assets/images/abt.jpg";
 import cs1 from "../assets/images/cs1.png";
 import cs2 from "../assets/images/cs2.png";
@@ -58,32 +58,6 @@ const Home: React.FC = () => {
   return (
     <div>
       <HeroSection />
-
-      <section className="bg-[#F9F9F9] py-8">
-        <div className="container mx-auto px-4">
-          <motion.div
-            className="flex flex-wrap justify-center gap-8"
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          >
-            {/* Logos with Staggered Animation */}
-            {[gog, lvp, krs, tns, bmb, pdg, impc, krt, qva, erg].map(
-              (logo, index) => (
-                <motion.img
-                  key={index}
-                  src={logo}
-                  alt="Logo"
-                  className="h-10  transition duration-300"
-                  variants={staggerItem}
-                  whileHover={{ scale: 1.1 }}
-                />
-              )
-            )}
-          </motion.div>
-        </div>
-      </section>
 
       {/* Discover Section */}
       <section
@@ -260,7 +234,29 @@ const Home: React.FC = () => {
           </div>
         </div>
       </section>
-
+      <section className="bg-[#F9F9F9] py-8">
+        <div className="container mx-auto px-4">
+          <motion.div
+            className="flex flex-wrap justify-center gap-8"
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            {/* Logos with Staggered Animation */}
+            {[gog, tta, tns, pdg, impc, krt, qva, erg].map((logo, index) => (
+              <motion.img
+                key={index}
+                src={logo}
+                alt="Logo"
+                className="h-10  transition duration-300"
+                variants={staggerItem}
+                whileHover={{ scale: 1.1 }}
+              />
+            ))}
+          </motion.div>
+        </div>
+      </section>
       {/* About Section */}
       <section
         className="bg-gradient-to-b from-[#00294B] to-[#001F3A] text-white font-sans"
@@ -589,7 +585,7 @@ const Home: React.FC = () => {
         </div>
 
         <motion.h1
-          className="md:text-5xl text-4xl font-extrabold text-[#00294B] max-w-2xl font-nouvelr z-20"
+          className="md:text-5xl text-2xl font-extrabold text-[#00294B] max-w-2xl font-nouvelr z-20"
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}

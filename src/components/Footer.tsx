@@ -2,8 +2,44 @@ import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 import logo from "../assets/images/vlg.png";
 import { FaXTwitter } from "react-icons/fa6";
 import { Link } from "react-router-dom";
+import { useState, FormEvent } from "react"; // Import FormEvent from React
 
 const Footer = () => {
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  // Your Mailchimp form action URL
+  const MAILCHIMP_URL =
+    "https://virtuallysafe.us17.list-manage.com/subscribe/post?u=3adcb1f4f3850f32df1eb83b2&amp;id=99e61d73e1&amp;f_id=00b78ae1f0";
+
+  // Explicitly type the 'e' parameter as FormEvent
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    if (!email || !/\S+@\S+\.\S+/.test(email)) {
+      setMessage("Please enter a valid email address.");
+      return;
+    }
+
+    const form = document.createElement("form");
+    form.action = MAILCHIMP_URL;
+    form.method = "POST";
+    form.target = "_blank";
+
+    const emailInput = document.createElement("input");
+    emailInput.type = "email";
+    emailInput.name = "EMAIL";
+    emailInput.value = email;
+    form.appendChild(emailInput);
+
+    document.body.appendChild(form);
+    form.submit();
+    document.body.removeChild(form);
+
+    setEmail("");
+    setMessage("Thank you for subscribing!");
+  };
+
   return (
     <footer className="bg-[#00294B] text-white py-10 px-6 font-lato">
       {/* Main Content */}
@@ -18,16 +54,23 @@ const Footer = () => {
           <p className="text-gray-300 mb-4">
             Subscribe for Latest News and Resources
           </p>
-          <div className="relative">
+          <form className="relative" onSubmit={handleSubmit}>
             <input
               type="email"
               placeholder="Enter email address"
+              value={email}
+              onChange={e => setEmail(e.target.value)} // TypeScript infers 'e' here
               className="w-full py-3 px-4 text-white bg-[#00294B] border border-gray-400 rounded-md placeholder-white focus:ring-2 focus:ring-[#61CE70] focus:outline-none"
+              required
             />
-            <button className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-[#61CE70] hover:bg-green-600 text-[#1E1E1E] px-5 py-2 rounded-md shadow-md transition duration-300">
+            <button
+              type="submit"
+              className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-[#61CE70] hover:bg-green-600 text-[#1E1E1E] px-5 py-2 rounded-md shadow-md transition duration-300"
+            >
               Send
             </button>
-          </div>
+          </form>
+          {message && <p className="mt-2 text-sm text-gray-300">{message}</p>}
         </div>
 
         {/* Organization */}
@@ -117,6 +160,7 @@ const Footer = () => {
             <a
               href="https://x.com/Virtuallysafeng?t=hnY6iTg5mQP2nOQ8C7ZPMw&s=08"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <span className="hover:text-green-500 cursor-pointer">
                 <FaXTwitter />
@@ -125,6 +169,7 @@ const Footer = () => {
             <a
               href="https://www.instagram.com/virtuallysafe?igsh=MTZuYWM4NjFnYzRhYg=="
               target="_blank"
+              rel="noopener noreferrer"
             >
               {" "}
               <span className="hover:text-green-500 cursor-pointer">
@@ -134,6 +179,7 @@ const Footer = () => {
             <a
               href="https://www.linkedin.com/company/106036032/admin/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BQwwoeE30SUu9Qv1iZmHWtw%3D%3D"
               target="_blank"
+              rel="noopener noreferrer"
             >
               {" "}
               <span className="hover:text-green-500 cursor-pointer">

@@ -1,12 +1,8 @@
 import { motion } from "framer-motion";
 import pim from "../assets/images/Cyber Space-30.jpg";
-import gog from "../assets/images/gog.png";
-import lvp from "../assets/images/lvp.png";
-import krs from "../assets/images/krs.png";
-import tns from "../assets/images/tns.png";
-import bmb from "../assets/images/bmb.png";
-import pdg from "../assets/images/pdg.png";
+
 import wsp from "../assets/images/ssd.jpg";
+import Logo from "../components/Logo";
 
 export default function Parent() {
   // Animation variants
@@ -18,21 +14,6 @@ export default function Parent() {
   const rotate = {
     hidden: { rotate: -10, opacity: 0 },
     visible: { rotate: 0, opacity: 1, transition: { duration: 0.8 } },
-  };
-
-  const staggerContainer = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-      },
-    },
-  };
-
-  const staggerItem = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 },
   };
 
   return (
@@ -103,30 +84,7 @@ export default function Parent() {
         </div>
       </section>
 
-      {/* Logos Section */}
-      <section className="bg-[#F9F9F9] py-8">
-        <div className="container mx-auto px-4">
-          <motion.div
-            className="flex flex-wrap justify-center gap-8"
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          >
-            {/* Logos with Staggered Animation */}
-            {[gog, lvp, krs, tns, bmb, pdg].map((logo, index) => (
-              <motion.img
-                key={index}
-                src={logo}
-                alt="Logo"
-                className="h-10 grayscale hover:grayscale-0 transition duration-300"
-                variants={staggerItem}
-                whileHover={{ scale: 1.1 }} // Add hover effect
-              />
-            ))}
-          </motion.div>
-        </div>
-      </section>
+      <Logo />
 
       {/* Education Section */}
       <section className="relative py-16 bg-[#851FEC] flex justify-center items-center">

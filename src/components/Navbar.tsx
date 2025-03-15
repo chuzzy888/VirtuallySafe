@@ -312,6 +312,24 @@ const Navbar = () => {
                       Programs Report
                     </Link>
                   </li>
+                  <li>
+                    <Link
+                      to="/about-us"
+                      className="block py-2 hover:bg-gray-100 font-lato"
+                      onClick={closeMobileMenu}
+                    >
+                      About Us
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/school-tour"
+                      className="block py-2 hover:bg-gray-100 font-lato"
+                      onClick={closeMobileMenu}
+                    >
+                      School tour
+                    </Link>
+                  </li>
                 </ul>
               </div>
             </li>
@@ -602,6 +620,7 @@ const Navbar = () => {
                       Young Fellows Program
                     </Link>
                   </li>
+
                   <li>
                     <Link
                       to="/competition"
@@ -624,6 +643,22 @@ const Navbar = () => {
                       className="block px-4 py-4 hover:bg-gray-100 text-left"
                     >
                       Program Reports
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/about-us"
+                      className="block px-4 py-4 hover:bg-gray-100 text-left"
+                    >
+                      About Us
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/school-tour"
+                      className="block px-4 py-4 hover:bg-gray-100 text-left"
+                    >
+                      School Tour
                     </Link>
                   </li>
                 </ul>

@@ -1,13 +1,8 @@
-import pdg from "../assets/images/pdg.png";
-import gog from "../assets/images/gog.png";
-import lvp from "../assets/images/lvp.png";
-import krs from "../assets/images/krs.png";
-import tns from "../assets/images/tns.png";
-import bmb from "../assets/images/bmb.png";
 import cmp from "../assets/images/dbts.gif";
 import cms from "../assets/images/vd.mp4";
 import atc from "../assets/images/arts.gif";
 import { motion } from "framer-motion";
+import Logo from "../components/Logo";
 
 export default function Competition() {
   return (
@@ -80,45 +75,6 @@ export default function Competition() {
           </div>
         </section>
 
-        <section className="bg-[#F9F9F9] py-8">
-          <div className="container mx-auto px-4">
-            {/* Logos Container */}
-            <div className="flex flex-wrap justify-center gap-8">
-              {/* Replace the src attributes with your logo images */}
-              <img
-                src={gog}
-                alt="Google"
-                className="h-10 grayscale hover:grayscale-0 transition duration-300"
-              />
-              <img
-                src={lvp}
-                alt="LevelUp"
-                className="h-10 grayscale hover:grayscale-0 transition duration-300"
-              />
-              <img
-                src={krs}
-                alt="Kairos"
-                className="h-10 grayscale hover:grayscale-0 transition duration-300"
-              />
-              <img
-                src={tns}
-                alt="Teens Can Code"
-                className="h-10 grayscale hover:grayscale-0 transition duration-300"
-              />
-              <img
-                src={bmb}
-                alt="Bambi"
-                className="h-10 grayscale hover:grayscale-0 transition duration-300"
-              />
-              <img
-                src={pdg}
-                alt="Pedagon"
-                className="h-10 grayscale hover:grayscale-0 transition duration-300"
-              />
-            </div>
-          </div>
-        </section>
-        <section className="bg-white  h-10  w-full"></section>
         <section className="bg-[#F9F9F9] py-8 w-full">
           {/* Debate Section */}
           <div className="flex flex-col md:flex-row gap-8 lg:gap-6 bg-[#851FEC] items-center rounded-lg p-5 mx-5 md:p-8 lg:p-12 md:mx-20 my-10">
@@ -198,7 +154,7 @@ export default function Competition() {
           </div>
         </section>
       </div>
-      <section className="bg-white  h-10  w-full"></section>
+      <Logo />
     </div>
   );
 }

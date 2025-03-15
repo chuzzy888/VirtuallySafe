@@ -35,6 +35,7 @@ const banners = [
 ];
 
 import Gallery from "../components/Gallery";
+import Logo from "../components/Logo";
 export default function AwarenessCampaign() {
   const [activeBanner, setActiveBanner] = useState(banners[0].url);
 
@@ -46,7 +47,7 @@ export default function AwarenessCampaign() {
     <div>
       <div className="bg-white text-white min-h-screen">
         {/* Hero Section */}
-        <section className="relative py-32 mb-10 bg-gradient-to-br from-[#4B0082] via-[#00294B] to-[#61CE70] overflow-hidden">
+        <section className="relative py-32  bg-gradient-to-br from-[#4B0082] via-[#00294B] to-[#61CE70] overflow-hidden">
           {/* Animated Background Shapes */}
           <motion.div
             className="absolute top-0 left-0 w-full h-full z-10"
@@ -87,7 +88,7 @@ export default function AwarenessCampaign() {
           {/* Content Container */}
           <div className="max-w-7xl mx-auto px-6 text-center relative z-20">
             <motion.h1
-              className="text-5xl md:text-6xl font-bold font-nouvelr mb-6 text-white"
+              className="text-3xl md:text-6xl font-bold font-nouvelr mb-6 text-white"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -123,6 +124,7 @@ export default function AwarenessCampaign() {
             </motion.a>
           </div>
         </section>
+
         <section className="w-full flex flex-col items-center py-10 relative">
           {/* Main Banner */}
           <div className="relative w-full max-w-7xl mx-5 md:mx-10 lg:mx-20">
@@ -169,6 +171,7 @@ export default function AwarenessCampaign() {
           </motion.h2>
           <Gallery images={images} />
         </div>
+        <Logo />
       </div>
     </div>
   );

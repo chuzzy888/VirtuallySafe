@@ -17,7 +17,7 @@ export default function HeroSection() {
       </div>
 
       {/* Content Container */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-28 flex flex-col lg:flex-row items-center gap-8 lg:gap-20">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-28 flex flex-col lg:flex-row items-center gap-8 lg:gap-20">
         {/* Left Side: Text Content */}
         <div className="flex-1 space-y-6 text-center lg:text-left">
           {/* Badge */}
@@ -43,7 +43,7 @@ export default function HeroSection() {
 
           {/* Subheading */}
           <motion.p
-            className="text-lg text-gray-300 max-w-md mx-auto lg:mx-0 "
+            className="text-sm text-gray-300 max-w-md mx-auto lg:mx-0 "
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
@@ -76,23 +76,6 @@ export default function HeroSection() {
 
         {/* Right Side: Image */}
 
-        {/* <motion.div
-          className="flex-1 relative"
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1 }}
-        >
-          <div className="relative w-full h-96  lg:h-[30rem] rounded-2xl overflow-hidden">
-            <img
-              src="https://res.cloudinary.com/karotcloud/image/upload/v1740585444/chr_yrtjgp.jpg"
-              alt="Hero Image"
-              className="w-full h-full object-cover object-center "
-            />
-          </div>
-          <div className="absolute top-1 rotate-3 right-10 hidden lg:block"></div>
-          <div className="absolute inset-0 border-4 border-green-400 rounded-lg transform -rotate-6 "></div>
-        </motion.div> */}
-
         <motion.div
           className="flex-1 relative"
           initial={{ opacity: 0, x: 50 }}
@@ -113,7 +96,7 @@ export default function HeroSection() {
             />
           </div>
           <div className="absolute top-1 rotate-3 right-10 hidden lg:block"></div>
-          <div className="absolute inset-0 border-4 border-green-400 rounded-lg transform -rotate-6 "></div>
+          <div className="absolute inset-0 border-4 border-white rounded-lg transform -rotate-6 "></div>
         </motion.div>
       </div>
     </section>

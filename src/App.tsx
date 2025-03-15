@@ -28,6 +28,8 @@ import YoungFellows from "./Programs/YoungFellows";
 import AwarenessCampaign from "./Programs/AwarenessCampaign";
 import SaferGamble from "./Programs/SaferGamble";
 import ScrollToTop from "./components/ScrollToTop";
+import AboutUsPage from "./Programs/AboutUsPage";
+import SchoolTourPage from "./Programs/SchoolTourPage";
 
 // A wrapper to conditionally show/hide the Navbar and Footer
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -73,6 +75,8 @@ function App() {
             <Route path="/safer-gambling" element={<SaferGamble />} />
             <Route path="/admin" element={<Dashboard />} />
             <Route path="/research" element={<Research />} />
+            <Route path="/about-us" element={<AboutUsPage />} />
+            <Route path="/school-tour" element={<SchoolTourPage />} />
             <Route
               path="/young-people-resources"
               element={<YoungPeopleResources />}

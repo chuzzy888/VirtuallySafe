@@ -1,15 +1,6 @@
 import img3 from "../assets/images/ct.jpg";
 import img4 from "../assets/images/awc.jpg";
-import gog from "../assets/images/gog.png";
-import tta from "../assets/images/tta.svg";
 
-import tns from "../assets/images/tns.png";
-
-import pdg from "../assets/images/pdg.png";
-import impc from "../assets/images/impc.svg";
-import krt from "../assets/images/Karot.svg";
-import qva from "../assets/images/QOVA LOGO.svg";
-import erg from "../assets/images/erg.svg";
 import abtImg from "../assets/images/abt.jpg";
 import cs1 from "../assets/images/cs1.png";
 import cs2 from "../assets/images/cs2.png";
@@ -23,6 +14,7 @@ import { RiPentagonLine, RiShapesFill } from "react-icons/ri";
 import { FaSquare, FaCircle, FaPlay } from "react-icons/fa";
 import { TbRectangleFilled } from "react-icons/tb";
 import HeroSection from "./HeroSection";
+import Logo from "../components/Logo";
 
 const Home: React.FC = () => {
   // Animation variants
@@ -56,13 +48,13 @@ const Home: React.FC = () => {
     visible: { opacity: 1, y: 0 },
   };
   return (
-    <div>
+    <div className="overflow-hidden">
       <HeroSection />
 
       {/* Discover Section */}
       <section
         id="discover"
-        className="py-20 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50"
+        className="md:py bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 mt-5 "
         style={{
           background:
             "linear-gradient(116.68deg, rgba(0, 41, 75, 0.1) 0%, rgba(23, 80, 84, 0.1) 11.96%, rgba(41, 110, 91, 0.1) 21.11%, rgba(68, 156, 101, 0.1) 30.52%, rgba(75, 169, 104, 0.1) 33.98%, rgba(83, 182, 107, 0.1) 42.46%, rgba(80, 176, 105, 0.1) 45.83%, rgba(72, 163, 102, 0.1) 52.76%, rgba(46, 120, 93, 0.1) 71.43%, rgba(29, 90, 86, 0.1) 83.59%, rgba(0, 41, 75, 0.1) 97.4%)",
@@ -71,7 +63,7 @@ const Home: React.FC = () => {
         <div className="container mx-auto px-4">
           {/* Section Title */}
           <motion.h2
-            className="text-[#00294B] text-center font-semibold text-3xl md:text-4xl mb-16 tracking-wider leading-tight font-nouvelr"
+            className="text-[#00294B] py-8 md:py-10 text-center font-semibold text-3xl md:text-4xl  tracking-wider leading-tight font-nouvelr"
             variants={fadeInUp}
             initial="hidden"
             whileInView="visible"
@@ -234,7 +226,7 @@ const Home: React.FC = () => {
           </div>
         </div>
       </section>
-      <section className="bg-[#F9F9F9] py-8">
+      {/* <section className="bg-[#F9F9F9] py-8">
         <div className="container mx-auto px-4">
           <motion.div
             className="flex flex-wrap justify-center gap-8"
@@ -243,7 +235,6 @@ const Home: React.FC = () => {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            {/* Logos with Staggered Animation */}
             {[gog, tta, tns, pdg, impc, krt, qva, erg].map((logo, index) => (
               <motion.img
                 key={index}
@@ -256,7 +247,9 @@ const Home: React.FC = () => {
             ))}
           </motion.div>
         </div>
-      </section>
+      </section> */}
+      <Logo />
+
       {/* About Section */}
       <section
         className="bg-gradient-to-b from-[#00294B] to-[#001F3A] text-white font-sans"
@@ -376,7 +369,11 @@ const Home: React.FC = () => {
               </h4>
               <p className="text-lg leading-relaxed">
                 A digital world that is safe, empowering, and designed for
-                children and young people to thrive. .
+                children and young people to thrive is one where every child can
+                explore, learn, and connect with confidence, free from harm and
+                exploitation. It is a world where technology serves as a tool
+                for growth, creativity, and opportunity, rather than a source of
+                risk or inequality.
               </p>
             </motion.div>
 

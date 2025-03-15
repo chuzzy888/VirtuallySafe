@@ -1,15 +1,10 @@
-import pdg from "../assets/images/pdg.png";
-import gog from "../assets/images/gog.png";
-import lvp from "../assets/images/lvp.png";
-import krs from "../assets/images/krs.png";
-import tns from "../assets/images/tns.png";
-import bmb from "../assets/images/bmb.png";
 import { motion } from "framer-motion";
 import { FaLightbulb, FaUsers, FaCode } from "react-icons/fa";
 import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Thumbs } from "swiper/modules";
 import "swiper/swiper-bundle.css";
+import Logo from "../components/Logo";
 
 const banners = [
   { id: 1, url: "b1.png", alt: "Banner 1" },
@@ -193,44 +188,7 @@ export default function Hacktivate() {
           </section>
         </div>
 
-        <section className="bg-[#F9F9F9] py-8">
-          <div className="container mx-auto px-4">
-            {/* Logos Container */}
-            <div className="flex flex-wrap justify-center gap-8">
-              {/* Replace the src attributes with your logo images */}
-              <img
-                src={gog}
-                alt="Google"
-                className="h-10 grayscale hover:grayscale-0 transition duration-300"
-              />
-              <img
-                src={lvp}
-                alt="LevelUp"
-                className="h-10 grayscale hover:grayscale-0 transition duration-300"
-              />
-              <img
-                src={krs}
-                alt="Kairos"
-                className="h-10 grayscale hover:grayscale-0 transition duration-300"
-              />
-              <img
-                src={tns}
-                alt="Teens Can Code"
-                className="h-10 grayscale hover:grayscale-0 transition duration-300"
-              />
-              <img
-                src={bmb}
-                alt="Bambi"
-                className="h-10 grayscale hover:grayscale-0 transition duration-300"
-              />
-              <img
-                src={pdg}
-                alt="Pedagon"
-                className="h-10 grayscale hover:grayscale-0 transition duration-300"
-              />
-            </div>
-          </div>
-        </section>
+        <Logo />
       </div>
     </div>
   );

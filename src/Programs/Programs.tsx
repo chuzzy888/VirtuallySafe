@@ -1,14 +1,10 @@
 import { useEffect, useState } from "react";
 import { collection, getDocs, query, where } from "firebase/firestore";
 import { db } from "../../firebaseConfig";
-import pdg from "../assets/images/pdg.png";
-import gog from "../assets/images/gog.png";
-import lvp from "../assets/images/lvp.png";
-import krs from "../assets/images/krs.png";
-import tns from "../assets/images/tns.png";
-import bmb from "../assets/images/bmb.png";
+
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { motion } from "framer-motion";
+import Logo from "../components/Logo";
 
 interface Resource {
   id: string;
@@ -71,20 +67,7 @@ export default function Programs() {
         </div>
       </section>
 
-      <section className="bg-[#F9F9F9] py-8">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-wrap justify-center gap-8">
-            {[gog, lvp, krs, tns, bmb, pdg].map((logo, index) => (
-              <img
-                key={index}
-                src={logo}
-                alt="Logo"
-                className="h-10 grayscale hover:grayscale-0 transition duration-300"
-              />
-            ))}
-          </div>
-        </div>
-      </section>
+      <Logo />
 
       <div
         className="relative z-10 px-6 py-20  bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900"

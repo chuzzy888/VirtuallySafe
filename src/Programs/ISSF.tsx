@@ -1,13 +1,8 @@
-import pdg from "../assets/images/pdg.png";
-import gog from "../assets/images/gog.png";
-import lvp from "../assets/images/lvp.png";
-import krs from "../assets/images/krs.png";
-import tns from "../assets/images/tns.png";
-import bmb from "../assets/images/bmb.png";
 import issf from "../assets/images/fgi.png";
 import { motion } from "framer-motion";
 import { FaMicrophone, FaGamepad, FaBook, FaHandshake } from "react-icons/fa";
 import { MdLock, MdPublic, MdPrivacyTip } from "react-icons/md";
+import Logo from "../components/Logo";
 export default function ISSF() {
   return (
     <div className="font-nouvelr">
@@ -157,44 +152,8 @@ export default function ISSF() {
         </div>
       </section>
 
-      <section className="bg-[#F9F9F9] py-8">
-        <div className="container mx-auto px-4">
-          {/* Logos Container */}
-          <div className="flex flex-wrap justify-center gap-8">
-            {/* Replace the src attributes with your logo images */}
-            <img
-              src={gog}
-              alt="Google"
-              className="h-10 grayscale hover:grayscale-0 transition duration-300"
-            />
-            <img
-              src={lvp}
-              alt="LevelUp"
-              className="h-10 grayscale hover:grayscale-0 transition duration-300"
-            />
-            <img
-              src={krs}
-              alt="Kairos"
-              className="h-10 grayscale hover:grayscale-0 transition duration-300"
-            />
-            <img
-              src={tns}
-              alt="Teens Can Code"
-              className="h-10 grayscale hover:grayscale-0 transition duration-300"
-            />
-            <img
-              src={bmb}
-              alt="Bambi"
-              className="h-10 grayscale hover:grayscale-0 transition duration-300"
-            />
-            <img
-              src={pdg}
-              alt="Pedagon"
-              className="h-10 grayscale hover:grayscale-0 transition duration-300"
-            />
-          </div>
-        </div>
-      </section>
+      <Logo />
+
       <section className="bg-white  h-8 md:h-10 w-full"></section>
 
       <div className="bg-gray-100">

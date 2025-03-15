@@ -1,16 +1,10 @@
 import { useEffect, useState } from "react";
 import { collection, getDocs, query, where } from "firebase/firestore";
 import { db } from "../../firebaseConfig"; // import your Firebase setup
-import pdg from "../assets/images/pdg.png";
-import gog from "../assets/images/gog.png";
-import lvp from "../assets/images/lvp.png";
-import krs from "../assets/images/krs.png";
-import tns from "../assets/images/tns.png";
-import bmb from "../assets/images/bmb.png";
-import omr from "../assets/images/std.jpg";
+
 import { motion } from "framer-motion";
 import { MdKeyboardArrowRight } from "react-icons/md";
-import Layout from "../components/Layout";
+import Logo from "../components/Logo";
 
 // Define the type for resources
 interface Resource {
@@ -88,44 +82,7 @@ export default function GeneralResources() {
         </div>
       </section>
 
-      <section className="bg-[#F9F9F9] py-8">
-        <div className="container mx-auto px-4">
-          {/* Logos Container */}
-          <div className="flex flex-wrap justify-center gap-8">
-            {/* Replace the src attributes with your logo images */}
-            <img
-              src={gog}
-              alt="Google"
-              className="h-10 grayscale hover:grayscale-0 transition duration-300"
-            />
-            <img
-              src={lvp}
-              alt="LevelUp"
-              className="h-10 grayscale hover:grayscale-0 transition duration-300"
-            />
-            <img
-              src={krs}
-              alt="Kairos"
-              className="h-10 grayscale hover:grayscale-0 transition duration-300"
-            />
-            <img
-              src={tns}
-              alt="Teens Can Code"
-              className="h-10 grayscale hover:grayscale-0 transition duration-300"
-            />
-            <img
-              src={bmb}
-              alt="Bambi"
-              className="h-10 grayscale hover:grayscale-0 transition duration-300"
-            />
-            <img
-              src={pdg}
-              alt="Pedagon"
-              className="h-10 grayscale hover:grayscale-0 transition duration-300"
-            />
-          </div>
-        </div>
-      </section>
+      <Logo />
 
       <div
         className="relative z-10 px-6 py-5  bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900"
@@ -198,40 +155,6 @@ export default function GeneralResources() {
           )}
         </motion.div>
       </div>
-      <section className="w-full bg-[#851FEC] font-nouvelr py-10 relative overflow-hidden">
-        <Layout>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-            {/* Left - Text Content */}
-            <div className="text-white px-6 md:px-8 ">
-              <h2 className="text-4xl lg:text-5xl font-extrabold leading-snug">
-                Empowering Safer Digital Experiences
-              </h2>
-              <p className="mt-5 text-lg lg:text-xl opacity-85 leading-relaxed">
-                Our mission is to enhance digital safety for internet users by
-                providing cutting-edge protection and awareness.
-              </p>
-              <button className="mt-8 px-7 py-3 bg-white text-[#851FEC] font-semibold rounded-lg shadow-md hover:bg-opacity-90 transition duration-300">
-                Learn More
-              </button>
-            </div>
-
-            {/* Right - Image */}
-            <div className="relative flex justify-center">
-              <div className="relative w-full max-w-md md:max-w-lg">
-                <img
-                  src={omr}
-                  alt="Mission banner"
-                  className="w-full rounded-2xl shadow-xl transform transition duration-500 hover:scale-105"
-                />
-
-                {/* Decorative Elements */}
-                <div className="absolute -top-8 -right-8 w-16 h-16 bg-white/15 rounded-full animate-pulse"></div>
-                <div className="absolute bottom-6 -left-6 w-20 h-20 bg-white/10 rounded-lg"></div>
-              </div>
-            </div>
-          </div>
-        </Layout>
-      </section>
     </div>
   );
 }
